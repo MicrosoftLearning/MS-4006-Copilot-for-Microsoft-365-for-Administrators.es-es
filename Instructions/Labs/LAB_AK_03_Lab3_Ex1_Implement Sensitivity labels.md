@@ -279,7 +279,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
 20. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Siguiente**.
 
-21. En la ventana **Escribir contraseña**, escriba la misma **Contraseña administrativa** proporcionada por el proveedor de hospedaje de laboratorio para la cuenta de administrador del inquilino (es decir, la cuenta de administrador de MOD) y, a continuación, seleccione **Iniciar sesión**.
+21. En la ventana **Escribir contraseña**, escriba la **Contraseña de usuario** proporcionada por el proveedor de hospedaje de laboratorio y, a continuación, seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
 
 22. Si aparece una ventana de **bienvenida**, seleccione la X para cerrarla.
 
