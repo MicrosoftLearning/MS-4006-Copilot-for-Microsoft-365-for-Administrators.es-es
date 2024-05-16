@@ -36,7 +36,7 @@ Holly Dickson es la nueva administradora de Microsoft 365 de Adatum. Debido a qu
 
 5. En la página **Usuarios activos**, en la lista de usuarios, seleccione **Christie Cline** (seleccione el nombre con hipervínculo de Christie y no la casilla situada junto a su nombre).
 
-6. En el panel de **Christie Cline** que aparecerá, la pestaña **Cuenta** se mostrará de forma predeterminada. Seleccione la pestaña **Licencias y aplicaciones**. En **Licencias (2)**, active las casillas situadas junto a **Enterprise Mobility + Security E5** y **Microsoft 365 E5** para desactivarlas y, a continuación, seleccione **Guardar cambios**. Una vez guardados los cambios, cierre el panel **Christie Cline**. 
+6. En el panel de **Christie Cline** que aparecerá, la pestaña **Cuenta** se mostrará de forma predeterminada. Seleccione la pestaña **Licencias y aplicaciones**. En **Licencias (2)**, active las casillas situadas junto a **Enterprise Mobility + Security E5** y **Microsoft 365 E5** para desactivarlas y, a continuación, seleccione **Guardar cambios**. Una vez guardados los cambios, cierre el panel **Christie Cline**.
 
 7. Ya está listo para crear una cuenta de usuario para Holly Dickson, que es la nueva administradora de Microsoft 365 de Adatum. Al hacerlo, asignará a Holly el rol de administradora global de Microsoft 365, que proporcionará a Holly acceso global a la mayoría de las características de administración y los datos en todos los servicios en línea de Microsoft. También asignará a Holly las dos licencias de las que acaba de cancelar la asignación de Christie Cline. <br/>
 
@@ -157,9 +157,13 @@ En una tarea anterior, creó un grupo de Microsoft 365 para los miembros del equ
 23. Permanezca conectado a LON-CL1 con el **Centro de administración de Microsoft 365** abierto en el explorador para la siguiente tarea.
 
 
-### Tarea 3: Implementar MFA mediante la creación de una directiva de acceso condicional
+### Tarea 3: Creación de una directiva de acceso condicional para implementar MFA
+
+**IMPORTANTE:** Esta tarea comienza examinando la directiva de acceso condicional que Microsoft creó para implementar MFA para todos los usuarios. Sin embargo, el asociado de aprendizaje podría estar usando inquilinos de prueba anteriores al cambio reciente de la directiva de MFA. Si no se le pidió realizar la MFA después del inicio de sesión de cada usuario, el inquilino de prueba no requiere MFA. En este caso, la directiva de MFA que creó Microsoft no aparecerá en la lista de directivas. Si ese fuera el caso con el inquilino, omitirá los pasos que revisan esta directiva. 
 
 Tal y como se indica en el entrenamiento, hay tres maneras de implementar MFA: con directivas de acceso condicional, con valores predeterminados de seguridad y con MFA por usuario heredado (no se recomienda para organizaciones grandes). En este ejercicio, habilitará MFA mediante una directiva de acceso condicional, que es el método que Microsoft recomienda. Adatum le ha pedido a Holly que habilite MFA para todos los usuarios de Microsoft 365, tanto internos como externos. Sin embargo, para probar la implementación del proyecto piloto de Microsoft 365 de Adatum, Holly desea excluir a los miembros del equipo de trabajo piloto de M365 de tener que usar MFA para iniciar sesión. Una vez completado el proyecto piloto, Holly actualizará la directiva quitando la exclusión de este grupo del requisito de MFA. La directiva también incluirá otros dos requisitos. Se requerirá MFA para todas las aplicaciones en la nube y se requerirá MFA incluso aunque los usuarios inicien sesión desde ubicaciones de confianza. 
+
+**Nota:** Aunque creará una directiva de acceso condicional en esta tarea que habilita la MFA, NO la habilitará. Algunos alumnos podrían tener un inquilino que requiera MFA, en cuyo caso no se aplicará esta directiva. Y aunque todos los alumnos de la clase tengan un inquilino que no requiera MFA, aún no habilitará la directiva. El punto de este ejercicio es proporcionarle experiencia en la creación de directivas para habilitar la autenticación multifactor y no autenticarse realmente con MFA, algo que se supone que sabe hacer. Por lo tanto, elegimos no permitir que los alumnos habiliten su directiva, lo que proporciona el mayor equilibrio, dada la posible situación de los inquilinos en la clase. 
 
 1. En la máquina virtual LON-CL1, el **Centro de administración de Microsoft 365** aún debería estar abierto en el explorador Microsoft Edge desde la tarea anterior. Debería iniciar sesión en Microsoft 365 como **Holly Dickson**.
    
@@ -169,7 +173,9 @@ Tal y como se indica en el entrenamiento, hay tres maneras de implementar MFA: c
 
 4. En la página **Acceso condicional | Información general**, seleccione **Directivas** en el panel de navegación central.
 
-5. En la página **Acceso condicional | Directivas**, revise las directivas predeterminadas disponibles con la suscripción de Microsoft 365. Observe la directiva titulada **Autenticación multifactor para asociados y proveedores de Microsoft**. Esta es la directiva de acceso condicional que Microsoft creó que requiere MFA para todos los usuarios de todas las aplicaciones en la nube. Seleccione esta directiva para poder ver cómo Microsoft está aplicando MFA para todos los usuarios de este inquilino de prueba.
+5. En la página **Acceso condicional | Directivas**, revise las directivas predeterminadas disponibles con la suscripción de Microsoft 365. Observe la directiva titulada **Autenticación multifactor para asociados y proveedores de Microsoft**. Esta es la directiva de acceso condicional que Microsoft creó que requiere MFA para todos los usuarios de todas las aplicaciones en la nube. Seleccione esta directiva para poder ver cómo Microsoft está aplicando MFA para todos los usuarios de este inquilino de prueba.   <br/>
+
+    **IMPORTANTE:** El asociado de aprendizaje podría estar usando inquilinos de prueba anteriores a este cambio reciente de MFA. Si no se le pidió realizar la MFA después del inicio de sesión de cada usuario, el inquilino de prueba no requiere MFA. En este caso, la directiva titulada **Autenticación multifactor para asociados y proveedores de Microsoft** no aparecerá en la lista de directivas, en cuyo caso deberá ir al paso 11 para empezar a crear su propia directiva de acceso condicional. 
 
 6. En la página **Autenticación multifactor para asociados y proveedores de Microsoft**, en el grupo **Usuarios**, seleccione **Todos los usuarios incluidos y los usuarios específicos excluidos**. Al hacerlo, se mostrarán dos pestañas: **Incluir** y **Excluir**.
 
@@ -223,17 +229,15 @@ Tal y como se indica en el entrenamiento, hay tres maneras de implementar MFA: c
 
 24. En el panel **Conceder** que aparecerá, compruebe que la opción **Conceder acceso** esté seleccionada (selecciónela si fuera necesario). Entonces, seleccione la casilla **Requerir autenticación multifactor**. Observe todos los demás controles de acceso disponibles que se pueden habilitar con esta directiva. Para esta directiva, solo se necesitará MFA. Seleccione el botón **Seleccionar** situado en la parte inferior del panel **Conceder**, el cual que cierra el panel. 
 
-25. En la parte inferior de la ventana **Nueva**, en el campo **Habilitar directiva**, seleccione **Activado**.
-
-26. Observe la opción que aparece en la parte inferior de la página advirtiendo que no debe bloquearse. Seleccione la opción **Entiendo que mi cuenta se verá afectada por esta directiva. Continuar de todos modos.** De hecho, Holly no se verá afectada, ya que es miembro del equipo de trabajo piloto de M365 que se excluye de esta directiva.
+25. **IMPORTANTE:** En este punto, normalmente establecería el campo **Habilitar directiva** en **Activado**. Sin embargo, dado que algunos alumnos podrían tener inquilinos de prueba más antiguos que no requieran MFA, mientras que otros podrían tener los nuevos inquilinos que la requieran, NO habilitará la directiva que acaba de crear. Por lo tanto, establezca el campo **Habilitar directiva** en **Desactivado**.
 
 27. Haga clic en el botón **Crear** para crear la directiva.
 
-28. En la ventana **Acceso condicional | Directivas** que aparece, compruebe que la directiva **MFA para todos los usuarios de Microsoft 365** aparezca y que su **Estado** esté establecido en **Activado**.
+28. En la ventana **Acceso condicional | Directivas** que aparece, compruebe que la directiva **MFA para todos los usuarios de Microsoft 365** aparezca y que su **Estado** esté establecido en **Desactivado**.
 
 29. Permanezca conectado a LON-CL1 con todas las pestañas del explorador de Microsoft Edge abiertas para la siguiente tarea.
 
-**Nota:** Según la explicación anterior, no hay ninguna manera de probar la directiva de acceso condicional en el inquilino de prueba de Microsoft 365 actual. La directiva de acceso condicional de Microsoft requiere MFA para todos los usuarios. Cuando hay varias directivas que requieren MFA, se aplica la directiva más restrictiva. En este caso, la directiva de Microsoft es más restrictiva que la que acaba de crear que incluía excepciones para los miembros del equipo de trabajo piloto. Aunque no es posible probar la directiva con este inquilino de prueba, le recomendamos que use esta experiencia de creación de directivas de acceso condicional para requerir MFA en las implementaciones reales de Microsoft 365.
+**Nota:** Según la explicación anterior, no hay ninguna forma de probar la directiva de acceso condicional en caso de tener un inquilino de prueba de Microsoft 365 que requiera MFA. La directiva de acceso condicional de Microsoft requiere MFA para todos los usuarios. Cuando hay varias directivas que requieren MFA, se aplica la directiva más restrictiva. En este caso, la directiva de Microsoft es más restrictiva que la que acaba de crear que incluía excepciones para los miembros del equipo de trabajo piloto, por lo que no habría ninguna manera de probar la directiva. Si el inquilino fuera uno anterior que no requiriese MFA, no lo probará, ya que otros alumnos de la clase podrían tener ya inquilinos que se requieran para el uso de MFA. En lugar de tener que probar su directiva mientras que otros no, se eligió no probarla. Aunque no es posible probar la directiva con este inquilino de prueba, le recomendamos que use esta experiencia de creación de directivas de acceso condicional para requerir MFA en las implementaciones reales de Microsoft 365.
 
 
 ### Tarea 4: Implementación de Smart Lockout de Microsoft Entra

@@ -8,9 +8,9 @@ Los inquilinos no se deben convertir a suscripciones de pago. Los inquilinos obt
 
 # Ruta de aprendizaje 1 - Laboratorio 1 - Ejercicio 1: Inicialización del inquilino de Microsoft 365 
 
-Adatum Corporation es una subsidiaria de Contoso Electronics. Adatum ejecuta sus aplicaciones heredadas (como Microsoft Exchange Server 2019) en una implementación local. Como nueva administradora de Microsoft 365 de Adatum, se le ha encargado a Holly Dickson preparar la implementación de Microsoft 365 de Adatum para Copilot para Microsoft 365. 
+Adatum Corporation es una subsidiaria de Contoso Electronics. Adatum ejecuta sus aplicaciones heredadas (como Microsoft Exchange Server 2019) en una implementación local. Sin embargo, recientemente se suscribió a Microsoft 365, creando así una implementación híbrida en la que debe sincronizar sus implementaciones locales y en la nube. 
 
-En este ejercicio, configurará el inquilino de prueba de Microsoft 365 de Adatum. Su instructor(a) le guiará sobre cómo obtener sus credenciales de Microsoft 365 en el entorno hospedado en el laboratorio. Usará estas credenciales en todos los laboratorios restantes de este curso. 
+Como administrador de Microsoft 365 de Adatum, se le ha encargado la implementación de Microsoft 365 en la implementación híbrida de Adatum mediante un entorno de laboratorio virtualizado. En este ejercicio, configurará el inquilino de prueba de Microsoft 365 de Adatum. Su instructor(a) le guiará sobre cómo obtener sus credenciales de Microsoft 365 en el entorno hospedado en el laboratorio. Usará estas credenciales en todos los laboratorios restantes de este curso. 
 
 En el entorno de laboratorio, el proveedor de hospedaje de laboratorio ya ha conseguido un inquilino de prueba de Microsoft 365 para usted. El proveedor de laboratorio también ha creado dos cuentas de administrador que usará en el entorno de laboratorio de máquina virtual: 
 
@@ -20,22 +20,7 @@ En el entorno de laboratorio, el proveedor de hospedaje de laboratorio ya ha con
 Iniciará sesión en el equipo Client 1 (LON-CL1) mediante la cuenta local de Adatum\Administrator. Al acceder a Microsoft 365 por primera vez, iniciará sesión inicialmente con la cuenta de administrador de inquilino de Microsoft 365 (MOD Administrator). A continuación, preparará el inquilino de Microsoft 365 de Adatum para Microsoft Entra ID y para laboratorios posteriores mediante alertas de auditoría y Microsoft Graph PowerShell.
 
 
-### Tarea 1: Obtener sus credenciales de Microsoft 365
-
-Una vez que inicie el laboratorio, podrá acceder al inquilino de prueba gratuito de Microsoft 365 proporcionado por el proveedor de hospedaje de laboratorio en el entorno de Microsoft Virtual Lab. Dentro de este inquilino, el proveedor de hospedaje de laboratorio ha creado una cuenta de usuario de Microsoft 365 para un administrador de inquilino predeterminado denominado MOD Administrator. El proveedor de hospedaje de laboratorio ha asignado a esta cuenta de usuario un nombre de usuario y una contraseña únicos, y a la cuenta se le ha asignado el rol Administrador global de Microsoft 365. Debe recuperar este nombre de usuario y contraseña para que pueda iniciar sesión en Microsoft 365 en el entorno de Microsoft Virtual Lab. También se le asignará un nombre de inquilino y un prefijo de inquilino. También usará esta información en varias tareas de los laboratorios de este curso.
-
-Dado que los asociados de aprendizaje pueden ofrecer este curso con el uso de una variedad de proveedores de hospedaje del laboratorio autorizados, los pasos reales necesarios para recuperar el nombre de UPN y el identificador de inquilino asociados con el inquilino pueden variar según el proveedor de hospedaje de laboratorio. Por lo tanto, tu instructor te dará las instrucciones necesarias sobre cómo recuperar esta información para tu curso. <br/>
-
-Debe anotar la siguiente información (proporcionada por el instructor) para su uso posterior:
-
-- **Prefijo de inquilino.** Este prefijo de inquilino es para las cuentas de usuario de Microsoft 365 que usará para iniciar sesión en Microsoft 365 en todos los laboratorios de este curso. El dominio de cada cuenta de usuario de Microsoft 365 tiene el formato de {alias de usuario}@xxxxxZZZZZZ.onmicrosoft.com, donde xxxxxZZZZZZ es el prefijo de inquilino. Consta de dos partes: el prefijo del host de laboratorio (xxxxx; algunos host usan un prefijo genérico como M365x, mientras que otros usan sus iniciales de empresa o alguna otra designación) y el identificador de inquilino (ZZZZZZ; por lo general, un número de 6 dígitos). Registre este valor de prefijo de inquilino xxxxxZZZZ para su uso posterior. Cuando cualquiera de los pasos del laboratorio le dirija a iniciar sesión en Microsoft 365 como una de las cuentas de usuario (como MOD Administrator), debe escribir el valor xxxxxZZZZZZ que obtuvo aquí como la parte del prefijo de inquilino del dominio .onmicrosoft.com.
-
-- **Contraseña de inquilino.** Esta es la contraseña proporcionada por el proveedor de hospedaje de laboratorio para la cuenta de administrador de inquilino. **Nota:** Usará esta contraseña no solo para la cuenta de administrador de inquilino, sino para cada una de las cuentas de usuario predefinidas que se usan en todos los laboratorios.
-
-- **Nombre de dominio personalizado.** El proveedor de hospedaje de laboratorio ha creado un nombre de dominio personalizado para Adatum. Usará este dominio al agregar un dominio personalizado a Microsoft 365 en un ejercicio de laboratorio posterior. El nombre de dominio tiene el formato **xxxUPNxxx.xxxCustomDomainxxx.xxx.** Debe reemplazar **xxxUPNxxx** por el número de UPN proporcionado por el proveedor de hospedaje de laboratorio y debe reemplazar **xxxCustomDomainxxx.xxx** por el nombre de dominio del proveedor de hospedaje de laboratorio. Por ejemplo, supongamos que el proveedor de hospedaje de laboratorio es Fabrikam Inc. Si el número de UPN que asigna al inquilino es AMPVU3a y su nombre de dominio personalizado es fabrikam.us, el nombre de dominio del nuevo dominio personalizado sería AMPVU3a.fabrikam.us. El instructor le proporcionará el número de UPN del proveedor de hospedaje de laboratorio y el nombre de dominio personalizado.  
-
-
-### Tarea 2: Configurar el perfil de organización de Adatum
+### Tarea 1: Configuración del perfil de organización de Adatum
 
 A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson, administradora de Microsoft 365 de Adatum. En su rol como Holly, se le ha encargado configurar el perfil de la empresa para su inquilino de prueba de Microsoft 365. En esta tarea, configurará las opciones necesarias para el inquilino de Adatum. Puesto que Holly todavía tiene que crear una cuenta de usuario personal de Microsoft 365 para ella misma (lo hará en el siguiente ejercicio de laboratorio), Holly iniciará sesión inicialmente en Microsoft 365 con la cuenta de administrador de inquilino de Microsoft 365 predeterminada y la contraseña que ha creado el proveedor de hospedaje de laboratorio. Esta es la cuenta **MOD Administrator**, cuyo alias es "admin". El nombre de usuario de esta cuenta es **admin@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio); el nombre para mostrar de esta cuenta será MOD Administrator.
 
@@ -47,11 +32,11 @@ A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson,
 
 4. En el explorador Edge, vaya a la página **Inicio de Microsoft 365**; para ello, escriba esta dirección URL en la barra de direcciones: **https://portal.office.com** 
 
-5. En el cuadro de diálogo **Iniciar sesión** que aparece, escriba el **nombre de usuario del inquilino de Microsoft 365** proporcionado por el proveedor de hospedaje de laboratorio (esta es la cuenta MOD Administrator). El nombre de usuario debe tener el formato **admin@xxxxxZZZZZZ.onmicrosoft.com**, donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio. Seleccione **Siguiente**. <br/>
+5. En el cuadro de diálogo **Iniciar sesión** que aparece, escriba el **nombre de usuario administrativo** proporcionado por el proveedor de hospedaje de laboratorio (esta es la cuenta del administrador de MOD). El nombre de usuario debe tener el formato **admin@xxxxxZZZZZZ.onmicrosoft.com**, donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio. Seleccione **Siguiente**. <br/>
 
-    **Nota:** El hospedaje de laboratorio puede proporcionar la capacidad de seleccionar un botón **Escribir texto** (o equivalente) junto a los datos de recursos, como nombres de usuario, contraseñas, comandos de PowerShell y otros datos que se deben escribir en todo el curso de estos laboratorios. Otros proveedores de hospedaje de laboratorio pueden proporcionar un método alternativo, como la capacidad de copiar y pegar esta información. Aproveche esta funcionalidad para no tener que escribir manualmente esta información. 
+    **Nota:** En las instrucciones de laboratorio que aparecen en el entorno de laboratorio de la máquina virtual, el proveedor de hospedaje de laboratorio puede proporcionar la capacidad de seleccionar un botón **Escribir texto** (o equivalente) junto a los datos de recursos, como nombres de usuario, contraseñas, comandos de PowerShell y otros datos que se deben escribir a lo largo del curso de estos laboratorios. Otros proveedores de hospedaje de laboratorio pueden proporcionar un método alternativo, como la capacidad de copiar y pegar esta información. Aproveche esta funcionalidad para no tener que escribir manualmente esta información. 
 
-6. En el cuadro de diálogo **Escribir contraseña**, escriba la **contraseña de inquilino única de Microsoft 365** proporcionada por el proveedor de hospedaje de laboratorio y, a continuación, seleccione **Iniciar sesión**.
+6. En el cuadro de diálogo **Escribir contraseña**, escriba la **Contraseña administrativa** proporcionada por el proveedor de hospedaje del laboratorio y, después, seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
 
 7. En el cuadro de diálogo **¿Mantener la sesión iniciada?**, active la casilla **No volver a mostrar esto** y, a continuación, seleccione **Sí**. En el cuadro de diálogo **Guardar contraseña** que aparece, seleccione **Nunca**.
 
@@ -95,13 +80,13 @@ A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson,
 
 17. Permanezca conectado a **LON-CL1** con Microsoft Edge abierto en el **Centro de administración de Microsoft 365** para la siguiente tarea.
 
-### Tarea 3: Crear un tema personalizado para el equipo del proyecto piloto de Adatum
+### Tarea 2: Creación de un tema personalizado para el equipo del proyecto piloto de Adatum
 
 En la tarea anterior, ha aprendido que cuando alguien ha iniciado sesión en Microsoft 365, el sistema mostrará su fotografía (si se proporciona una) o sus iniciales si no se proporciona ninguna fotografía. Holly Dickson, administradora de Microsoft 365 de Adatum, no está satisfecha con ver una imagen o las iniciales del usuario que ha iniciado sesión. Quiere crear un tema personalizado para los miembros de su equipo de proyecto piloto para que también muestre el nombre del usuario que ha iniciado sesión. Al final del proyecto piloto, si los miembros del equipo del proyecto piloto prefieren este diseño, configurará esta misma opción en el tema predeterminado para que se aplique a todos los usuarios. 
 
 Los temas personalizados deben estar asociados a uno o varios grupos de Microsoft 365. Por tanto, para implementar este cambio, Holly primero debe crear un grupo de Microsoft 365 para los miembros del equipo del proyecto piloto. A continuación, podría crear un tema personalizado asociado a este grupo que permita que la configuración muestre el nombre del usuario que ha iniciado sesión. En esta tarea, creará un grupo de Microsoft 365 para los miembros del equipo piloto de Microsoft 365 de Adatum. Después, creará un tema personalizado que muestre el nombre del usuario que ha iniciado sesión y asignará el equipo del proyecto piloto a este tema. También revisará otras opciones que se pueden configurar con temas personalizados y podrá realizar cualquier cambio de color que desee.
 
-**Nota:** El registro de equipo que cree para el equipo de proyectos piloto de Microsoft 365 también se usará en un ejercicio de laboratorio posterior en el que se crea una directiva de acceso condicional para habilitar la autenticación multifactor. Habilitará MFA para todos los usuarios, excepto para los miembros del equipo de proyecto piloto.
+**Importante:** Al final de esta tarea, intentará guardar el tema personalizado que creó. Hay un problema conocido en la plataforma en el Centro de administración de Microsoft 365 en el que a veces guarda el tema personalizado sin problemas y otras veces devuelve un mensaje que dice: "Lo sentimos, no se ha podido guardar el tema". Inténtelo de nuevo más tarde." Si recibe este mensaje, lo único que puede hacer es continuar. Si se intenta guardar el tema más tarde, suele aparecer el mismo error. Este problema no afectará a ningún laboratorio futuro, aparte de que no mostrará el nombre del usuario junto a su icono de usuario o sus iniciales en la línea de encabezado. A pesar de este problema conocido, queremos que realice esta tarea para que adquiera experiencia en la creación de un tema, aunque puede que no se guarde en el inquilino de prueba.
 
 1. Todavía debe iniciar sesión en LON-CL1 como la cuenta local **adatum\administrator** y, en el explorador Edge, todavía debe iniciar sesión en Microsoft 365 como **MOD Administrator**. 
 
@@ -137,13 +122,13 @@ Los temas personalizados deben estar asociados a uno o varios grupos de Microsof
 
     Seleccione **Close** (Cerrar). Esto le regresa a la página **Equipos y grupos activos**, que debe mostrar la pestaña **Grupos de Teams y Microsoft 365**. Dado que el grupo de proyecto piloto de M365 era un grupo de Microsoft 365, debería mostrarse en esta pestaña en algún momento. Si es necesario, seleccione la opción **Actualizar** en la barra de menús hasta que vea el grupo de proyecto piloto de M365 en la lista de grupos de Teams y Microsoft 365.
 
-14. En el **Centro de administración de Microsoft 365**, en el grupo **Configuración** del panel de navegación, seleccione **Configuración de la organización**. 
+14. En el **Centro de administración de Microsoft 365**, seleccione **Configuración** en el panel de navegación y, a continuación, seleccione **Configuración de la organización**. 
 
-15. En la página **Configuración de la organización**, seleccione la pestaña **Perfil de organización**.
+15. En la pagina **Configuración de la organización**, la pestaña **Servicios** se mostrará de forma predeterminada. Seleccione la pestaña **Perfil de organización**.
 
-16. En la lista de datos de perfil de la organización, seleccione **Temas personalizados**.
+16. La pestaña **Perfil de la organización** muestra la lista de datos del perfil de la organización. En la lista de datos, seleccione **Temas personalizados**.
 
-17. En el panel **Personalizar Microsoft 365 para su organización** que aparece, puede personalizar el tema predeterminado que ven los usuarios al iniciar sesión en Microsoft 365 y puede agregar más temas personalizados. Seleccione la opción **+Agregar tema**.
+17. En el panel **Personalizar Microsoft 365 para su organización** que aparece, puede personalizar el tema predeterminado que ven los usuarios al iniciar sesión en Microsoft 365 y puede agregar más temas personalizados. Si quiere crear un nuevo tema personalizado que solo se aplique a los miembros del grupo del **proyecto piloto de M365** que creó anteriormente, seleccione la opción **+Agregar tema**.
 
 18. En el panel **Nuevo tema de grupo que aparece**, la pestaña **General** se muestra de forma predeterminada. Escriba el **tema del proyecto piloto M365** en el campo **Nombre**.
 
@@ -151,23 +136,35 @@ Los temas personalizados deben estar asociados a uno o varios grupos de Microsof
 
     **Nota:** Si el **proyecto piloto de M365** no aparece en la lista de grupos, escriba **M365** en el campo **Grupos**. Debería aparecer un cuadro de resultados de la búsqueda que muestre el grupo de **proyecto piloto de M365**. Seleccione **proyecto piloto de M365**. 
 
-20. Active la casilla **Mostrar el nombre para mostrar del usuario**. Esta es la configuración que Holly quiere personalizar para los miembros del equipo del proyecto piloto de M365. Esta opción muestra el nombre de los usuarios junto a sus iniciales en cada encabezado de ventana.
+20. Active la casilla **Mostrar el nombre para mostrar del usuario**. Esta es la configuración que Holly quiere personalizar para los miembros del equipo del proyecto piloto de M365. Esta opción muestra el nombre del usuario que ha iniciado sesión junto a sus iniciales en cada encabezado de ventana.
  
-21. Seleccione **Guardar**. Cierre el **panel de temas del proyecto piloto de M365** una vez guardados los cambios. 
+21. Seleccione la pestaña **Logotipos** y tómese un tiempo para revisar sus opciones. Haga lo mismo para la pestaña **Colores**. Observe las distintas opciones de temas y marcas que puede actualizar. <br/>
 
-22. Seleccione el icono **Actualizar** situado en la parte superior de la pantalla, a la izquierda de la barra de direcciones. Una vez que se actualice la pantalla, observe cómo aparece el nombre **MOD Administrator** a la izquierda del círculo con el icono de megáfono. Cuando los miembros del equipo del proyecto piloto de Microsoft 365 inician sesión en Microsoft 365, su nombre de usuario aparece ahora a la izquierda de su imagen de perfil (o, en este caso, un icono de un megáfono) o sus iniciales debido al tema personalizado que acaba de crear.
+    Para este laboratorio, puede cambiar cualquiera de las opciones o dejar los valores predeterminados tal como están. Por ejemplo, en el entorno real, puede agregar el logotipo de su empresa y establecer la imagen de fondo como valor predeterminado para todos los usuarios. En este laboratorio, puede cambiar los colores del panel de navegación, el color del texto, el color de los iconos y el color de énfasis. <br/>
 
-23. En la lista de datos de perfil de la organización, seleccione **Temas personalizados**.
+    **Continúe y explore las diferentes opciones de este tema que usarán los miembros del equipo del proyecto piloto de Microsoft 365. Realice los cambios que desee.** <br/>
 
-24. En el panel **Personalizar Microsoft 365 para su organización** que aparece, observe cómo se muestra el **tema Predeterminado** y el **tema del proyecto piloto de M365**. Seleccione el **Tema predeterminado**. 
+    **Sugerencia:** Algunos patrones de color distraen estéticamente a los usuarios. Si cambia alguno de los colores, se recomienda que evite usar colores muy contrastados juntos, como los colores neón y los colores de alta resolución, como el rosa fuerte y el blanco.
 
-25. En el panel **Tema predeterminado**, observe cómo la opción **Mostrar el nombre para mostrar del usuario** no está seleccionada para el tema predeterminado. Si Holly más adelante decide convertir la opción **Mostrar el nombre para mostrar del usuario** en una característica permanente, seleccionará esta opción en el panel **Tema predeterminado** para que se aplique a todos los usuarios de Adatum y eliminará el **tema del proyecto piloto de M365**. <br/>
+22. Seleccione **Guardar**. 
 
-    Cierre el panel **Tema personalizado**.
+    **Nota:** Como se mencionó anteriormente al principio de esta tarea, hay un problema conocido en la plataforma en el Centro de administración de Microsoft 365, donde a veces se guarda un nuevo tema personalizado y otras veces devuelve un mensaje que dice: "Lo sentimos, no se ha podido guardar el tema". Inténtelo de nuevo más tarde." Si recibe este mensaje, no afectará a ningún laboratorio futuro. Como su tema personalizado no se guardó, el sistema simplemente no mostrará el nombre de usuario junto a su icono o sus iniciales en la línea de en (además, no aparecerán los cambios de color que haya realizado). Aún así le pedimos que realice esta tarea aunque reciba este mensaje para que adquiera la experiencia de crear un tema como este. Por lo tanto, si recibe este error, omita el paso siguiente, que prueba el tema personalizado. Sin embargo, aún puede realizar los pasos restantes siguiendo el siguiente paso para obtener información sobre el tema Predeterminado. Tanto si se ha guardado el tema personalizado como si no, cierre el panel de **temas del proyecto piloto de M365**.
 
-26. Permanezca conectado a **LON-CL1** con Microsoft Edge abierto en el **Centro de administración de Microsoft 365** para la siguiente tarea.
+23. Si el tema personalizado no se guardó, vaya al paso siguiente. Sin embargo, si se guardó el tema personalizado, seleccione el icono **Actualizar** situado en la parte superior de la pantalla, a la izquierda de la barra de direcciones. Una vez que se actualice la pantalla, observe cómo el **nombre del administrador de MOD** aparece a la izquierda del círculo con las iniciales de MA o del icono seleccionado para esta cuenta por el proveedor de hospedaje de laboratorio. Cuando los miembros del equipo del proyecto piloto de Microsoft 365 inician sesión en Microsoft 365, este tema personalizado mostrará su nombre de usuario, tal como aparece aquí el nombre del administrador de MOD. 
 
-### Tarea 4: Instalar Microsoft Graph PowerShell 
+24. En la lista de datos de perfil de la organización, seleccione **Temas personalizados**.
+
+25. En el panel **Personalizar Microsoft 365 para su organización** que aparece, observe cómo se muestra el **tema Predeterminado** y el **tema del proyecto piloto de M365** (si el tema se guardó en el paso anterior). Seleccione el **Tema predeterminado**. 
+
+26. En el panel **Tema predeterminado**, observe cómo la opción **Mostrar el nombre para mostrar del usuario** no está seleccionada para el tema predeterminado. Si Holly más adelante decide convertir la opción **Mostrar el nombre para mostrar del usuario** en una característica permanente, seleccionará esta opción en el panel **Tema predeterminado** para que se aplique a todos los usuarios de Adatum y eliminará el **tema del proyecto piloto de M365**. <br/>
+
+    **Nota:** Si recibió el mensaje de error "Lo sentimos, no se ha podido guardar el tema" Inténtelo de nuevo más tarde." cuando intentó guardar el tema personalizado, seleccione esta opción **Mostrar el nombre para mostrar del usuario** en el tema Predeterminado y, a continuación, seleccione **Guardar**. Queremos que vea lo que ocurre cuando se selecciona esta opción, aunque no haya podido guardar su tema personalizado. Si establece esta opción en el tema Predeterminado, seleccione el icono **Actualizar** situado en la parte superior de la pantalla, a la izquierda de la barra de direcciones. Una vez que se actualice la pantalla, observe cómo el **nombre del administrador de MOD** aparece a la izquierda del círculo con las iniciales de MA o del icono seleccionado para esta cuenta por el proveedor de hospedaje de laboratorio.
+ 
+27. Cierre el panel **Tema predeterminado**.
+
+28. Permanezca conectado a **LON-CL1** con Microsoft Edge abierto en el **Centro de administración de Microsoft 365** para la siguiente tarea.
+
+### Tarea 3: Instalación de PowerShell de Microsoft Graph 
 
 Microsoft Graph PowerShell es necesario para realizar varias tareas de configuración al instalar Microsoft 365. Dado que los ejercicios de laboratorio futuros realizarán varias de estas tareas con Windows PowerShell, debe comenzar instalando el módulo de PowerShell de Microsoft Graph. Este módulo le permite realizar muchas de las tareas de administración de usuarios y organizaciones de Microsoft 365 a través de PowerShell. Es excelente para tareas masivas, como restablecimientos de contraseña, directivas de contraseña, administración de licencias e informes, etc.  
 
