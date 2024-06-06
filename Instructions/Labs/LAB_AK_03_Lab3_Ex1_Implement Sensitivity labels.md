@@ -2,7 +2,7 @@
 
 En su rol como Holly Dickson, el nuevo administrador de Microsoft 365 de Adatum, tiene Microsoft 365 implementado en un entorno de laboratorio virtualizado. A medida que continúe con el proyecto piloto de Microsoft 365, los pasos siguientes son implementar etiquetas de confidencialidad con Microsoft Entra ID Protection en Adatum. En este laboratorio, creará y publicará una etiqueta, y probará una etiqueta publicada. Sin embargo, al hacerlo, no probará la etiqueta que cree en este laboratorio. En su lugar, probará una etiqueta diferente.
 
-**Importante:** Al publicar una nueva etiqueta de confidencialidad y una directiva de etiquetas, puede tardar hasta 24 horas en propagarse a través de Microsoft 365. Por lo tanto, no podrá probar la etiqueta que cree en este laboratorio. En su lugar, probará una etiqueta de confidencialidad preexistente denominada **Project - Falcon**. Esta etiqueta preexistente es casi idéntica a la etiqueta que creará, por lo que podrá ver los mismos resultados que si hubiera podido probar la etiqueta que creó. 
+**Importante:** Al publicar una nueva etiqueta de confidencialidad y una directiva de etiquetas, puede tardar hasta 24 horas en propagarse a través de Microsoft 365. Por lo tanto, no podrá probar la etiqueta que cree en este laboratorio. En su lugar, probará una etiqueta de confidencialidad preexistente denominada **Project - Falcon**. Esta etiqueta preexistente es casi idéntica a la etiqueta que creará, por lo que básicamente podrá ver los mismos resultados que si hubiera podido probar la etiqueta que creó. 
 
 
 ### Tarea 1: Instalar el cliente de etiquetado unificado de Microsoft Entra ID Protection
@@ -335,5 +335,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
     **Nota:**  En esta tarea, acaba de comprobar que Microsoft Entra ID Protection protegió el documento en función de los parámetros de la directiva PII que configuró. Cuando a Joni se le asignó el permiso de Solo visualización, el documento se abrió en la Vista de lectura y no pudo cambiarlo. Cuando a Joni se le asignó el permiso Editar, el documento se abrió en Word y pudo cambiarlo. Y como Holly no compartió el documento con usted, usted no pudo abrirlo cuando ella envió el documento en un correo electrónico a su buzón personal. 
 
+## Fin del laboratorio 3
 
-## Felicidades. Acaba de completar el laboratorio final en este curso.
+
+# Felicidades. Acaba de completar el laboratorio final en este curso.
