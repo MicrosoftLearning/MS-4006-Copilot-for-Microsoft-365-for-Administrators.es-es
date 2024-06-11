@@ -75,7 +75,7 @@ En la tarea anterior, asignó un rol Administrador directamente a la cuenta de u
 
 20. Para comprobar que Lynne heredó los roles asignados al grupo de roles de administración de usuarios, seleccione **Lynne Robbins** en la lista de usuarios activos. 
 
-21. En el panel **Lynne Robbins** que aparece, en la pestaña **Cuenta** que se muestra de forma predeterminada, debería ver los tres roles de administración de usuarios asignados a Lynne. En la sección **Roles****, seleccione **Administrar roles**.
+21. En el panel **Lynne Robbins** que aparece, en la pestaña **Cuenta** que se muestra de forma predeterminada, debería ver los tres roles de administración de usuarios asignados a Lynne. En la sección **Roles**, seleccione **Administrar roles**.
 
 22. En el panel **Administrar roles de administrador** que aparece, en la opción **Acceder al Centro de administración**, tenga en cuenta los tres roles seleccionados y el nombre del grupo desde el que se asignaron a Lynne. Tenga en cuenta también cómo se atenúan los tres roles. Esto indica que no se puede anular la selección de los roles de esta ventana. Dado que los roles se asignaron a Lynne desde un grupo de roles que contenía estos roles, solo puede anular la asignación de los roles quitando a Lynne como miembro del grupo de roles. Acaba de comprobar que Lynne tiene asignados estos roles. Cierre el panel **Administrar roles de administrador**.
 
@@ -212,7 +212,11 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 11. En el explorador **Edge**, vaya a **https://portal.office.com**. 
 
-12. Comenzará iniciando sesión en Microsoft 365 como **Joni Sherman**. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje del laboratorio). En la ventana **Escribir contraseña**, escriba la misma **contraseña de inquilino de Microsoft 365** proporcionada por el proveedor de hospedaje del laboratorio para la cuenta de administrador de inquilinos (es decir, la cuenta de administrador de MOD).
+12. Comenzará iniciando sesión en Microsoft 365 como **Joni Sherman**. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje del laboratorio). <br/>
+
+    **Importante:** El proveedor de hospedaje de laboratorio ha asignado una **contraseña administrativa** a la cuenta de administrador de MOD y ha asignado esta misma **contraseña administrativa** a la cuenta de Holly Dickson al crearla. Sin embargo, el proveedor de hospedaje de laboratorio ha asignado otra **contraseña de usuario** a todas las demás cuentas de usuario predefinidas. En el futuro, al iniciar sesión como cualquier usuario que no sea el administrador de MOD o Holly Dickson, debe escribir esta **contraseña de usuario** y NO la **contraseña administrativa**. <br/>
+
+    Puesto que inicia sesión como Joni Sherman, escriba esta **contraseña de usuario** en la ventana **Escribir contraseña**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
 
 13. En la ventana **¿Mantener la sesión iniciada?**, active la casilla **No volver a mostrar** y, a continuación, seleccione **Sí**. Si aparece la ventana **Guardar contraseña**, seleccione **Nunca**.
 
@@ -224,7 +228,9 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 17. Ahora cerrará la sesión de Microsoft 365 como Joni. En **Microsoft Edge**, en la parte superior derecha de la página **Bienvenido a Microsoft 365**, seleccione el icono de usuario para **Joni Sherman** (el círculo en la esquina superior derecha con la imagen de Joni) y, en la ventana **Joni Sherman** que aparece, seleccione **Cerrar sesión.** 
 
-18. Ahora volverá a iniciar sesión en Microsoft 365 como **Lynne Robbins**. En la pestaña actual del explorador **Edge**, debe mostrar un mensaje que indica **Joni, se ha cerrado la sesión**. En esta ventana, se le ofrece la opción de volver a iniciar sesión como Joni o iniciar sesión como un usuario diferente. Seleccione **Cambiar a otra cuenta** y, en el campo **Dirección de correo electrónico** que aparece, escriba **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Iniciar sesión**. En la ventana **Escribir contraseña**, escriba la misma **contraseña de inquilino de Microsoft 365** proporcionada por el proveedor de hospedaje del laboratorio para la cuenta de administrador de inquilinos (es decir, la cuenta de administrador de MOD).
+18. Ahora volverá a iniciar sesión en Microsoft 365 como **Lynne Robbins**. En la pestaña actual del explorador **Edge**, debe mostrar un mensaje que indica **Joni, se ha cerrado la sesión**. En esta ventana, se le ofrece la opción de volver a iniciar sesión como Joni o iniciar sesión como un usuario diferente. <br/>
+
+    Seleccione **Cambiar a otra cuenta** y, en el campo **Dirección de correo electrónico** que aparece, escriba **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Iniciar sesión**. En la ventana **Escribir contraseña**, escriba la **contraseña de usuario** proporcionada por el proveedor de hospedaje del laboratorio y seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA. 
 
 19. Si aparece el cuadro de diálogo **Bienvenido a Microsoft 365**, seleccione la flecha hacia delante (>) dos veces y, a continuación, seleccione la marca de verificación para cerrar la ventana.
 
@@ -288,7 +294,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 43. Como procedimiento recomendado, cierre todas las pestañas del explorador, excepto la pestaña **Cerrar sesión** una vez que se haya cerrado la sesión. En la pestaña **Cerrar sesión**, vaya a **https://portal.office.com**. 
 
-44. En la ventana **Elegir una cuenta**, seleccione **Usar otra cuenta**. En la ventana **Iniciar sesión**, escriba **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje del laboratorio). En la ventana **Escribir contraseña**, escriba la misma **contraseña de inquilino de Microsoft 365** proporcionada por el proveedor de hospedaje del laboratorio para la cuenta de administrador de inquilinos (es decir, la cuenta de administrador de MOD).  <br/>
+44. En la ventana **Elegir una cuenta**, seleccione **Usar otra cuenta**. En la ventana **Iniciar sesión**, escriba **AlexW@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje del laboratorio). En la ventana **Escribir contraseña**, escriba la **contraseña de usuario** proporcionada por el proveedor de hospedaje del laboratorio.  <br/>
 
     Debería aparecer la ventana **Seleccionar una cuenta** y debería mostrar el siguiente mensaje de error: **Se ha bloqueado la cuenta. Contacte con la persona responsable de soporte técnico para desbloquearla y vuelva a intentarlo.** Acaba de comprobar que Alex (o alguien que ha obtenido el nombre de usuario y la contraseña de Alex) no puede iniciar sesión. <br/>
 

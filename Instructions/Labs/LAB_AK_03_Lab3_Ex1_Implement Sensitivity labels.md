@@ -2,7 +2,7 @@
 
 En su rol como Holly Dickson, el nuevo administrador de Microsoft 365 de Adatum, tiene Microsoft 365 implementado en un entorno de laboratorio virtualizado. A medida que continúe con el proyecto piloto de Microsoft 365, los pasos siguientes son implementar etiquetas de confidencialidad con Microsoft Entra ID Protection en Adatum. En este laboratorio, creará y publicará una etiqueta, y probará una etiqueta publicada. Sin embargo, al hacerlo, no probará la etiqueta que cree en este laboratorio. En su lugar, probará una etiqueta diferente.
 
-**Importante:** Al publicar una nueva etiqueta de confidencialidad y una directiva de etiquetas, puede tardar hasta 24 horas en propagarse a través de Microsoft 365. Por lo tanto, no podrá probar la etiqueta que cree en este laboratorio. En su lugar, probará una etiqueta de confidencialidad preexistente denominada **Project - Falcon**. Esta etiqueta preexistente es casi idéntica a la etiqueta que creará, por lo que podrá ver los mismos resultados que si hubiera podido probar la etiqueta que creó. 
+**Importante:** Al publicar una nueva etiqueta de confidencialidad y una directiva de etiquetas, puede tardar hasta 24 horas en propagarse a través de Microsoft 365. Por lo tanto, no podrá probar la etiqueta que cree en este laboratorio. En su lugar, probará una etiqueta de confidencialidad preexistente denominada **Project - Falcon**. Esta etiqueta preexistente es casi idéntica a la etiqueta que creará, por lo que básicamente podrá ver los mismos resultados que si hubiera podido probar la etiqueta que creó. 
 
 
 ### Tarea 1: Instalar el cliente de etiquetado unificado de Microsoft Entra ID Protection
@@ -183,45 +183,52 @@ En su lugar, probará una de las etiquetas de confidencialidad preexistentes de 
 
 1. En LON-CL1, en el explorador Edge, todavía debe iniciar sesión en Microsoft 365 como **Holly Dickson**.
 
-2. Para validar la etiqueta de confidencialidad **Project-Falcon**, primero debe asignarla a un documento. Seleccione la pestaña **Inicio | Microsoft 365** en el explorador para volver a la página principal de Microsoft 365. Seleccione el icono **Aplicaciones** en el lado izquierdo de la pantalla. En la página **Aplicaciones** que aparece, haga clic con el botón derecho en el icono de **Word** y seleccione **Abrir en una nueva pestaña**. 
+2. Primero revisará la etiqueta de confidencialidad **Project-Falcon** que aplicará a un documento de esta tarea.  En el explorador Edge, todavía debe tener abierta una pestaña para el portal de **Microsoft Purview** de la tarea anterior. En el portal de **Microsoft Purview**, en el grupo **Protección de la información** del panel de navegación izquierdo, seleccione **Etiquetas**. 
 
-3. En la pestaña **Word | Microsoft 365**, en la sección **Crear nuevo** en la parte superior de la página, seleccione **Documento en blanco**.
+3. En la página **Etiquetas**, en la lista de etiquetas, seleccione la flecha derecha (**>**) junto a ** Extremadamente confidencial** para mostrar las subetiquetas. Al hacerlo, se muestra la etiqueta **Project - Falcon** existente.
 
-4. Si aparece una ventana **Opción de privacidad**, seleccione **Cerrar**.
+4. Seleccione la etiqueta **Project - Falcon** (no la casilla; seleccione el nombre de la etiqueta). Al hacerlo, se abre un panel de detalles de **Project - Falcon**. Revise la información definida para esta etiqueta y cierre el panel cuando haya terminado.  
 
-5. Si la cinta de opciones de Word muestra iconos para cada característica, pero no desglosa los iconos por grupo, seleccione la flecha hacia abajo en el lado derecho de la cinta de opciones y, después, en **Diseño de la cinta de opciones**, seleccione**Cinta clásica**. Esto cambiará la cinta de opciones al estilo de cinta tradicional que se desglosa por grupo de características (como Deshacer, Portapapeles, Fuente, Párrafo, Estilos, etc.).
+5. Ahora asignará la etiqueta de confidencialidad **Project-Falcon** a un documento. Seleccione la pestaña **Inicio | Microsoft 365** en el explorador para volver a la página principal de Microsoft 365. Seleccione el icono **Aplicaciones** en el lado izquierdo de la pantalla. En la página **Aplicaciones** que aparece, haga clic con el botón derecho en el icono de **Word** y seleccione **Abrir en una nueva pestaña**. 
 
-6. En el documento de **Word**, escriba el texto siguiente: **Probar una etiqueta de confidencialidad en un documento con información de identificación personal (PII); en este caso, un número de seguridad social de EE. UU.: 111-11-1111.**
+6. En la pestaña **Word | Microsoft 365**, en la sección **Crear nuevo** en la parte superior de la página, seleccione **Documento en blanco**.
 
-7. Dado que ha habilitado las etiquetas de confidencialidad al principio de este ejercicio, **Word** debe mostrar un grupo **Confidencialidad** en la cinta de opciones de la parte superior de la página. Seleccione la flecha hacia abajo en el grupo **Confidencialidad**. En el menú desplegable que aparece, se debe mostrar la lista de tipos de etiquetas de confidencialidad. Seleccione **Extremadamente confidencial** y, a continuación, en el submenú que aparece, seleccione **Project - Falcon**. <br/>
+7. Si aparece una ventana **Opción de privacidad**, seleccione **Cerrar**.
+
+8. Si la cinta de opciones de Word muestra iconos para cada característica, pero no desglosa los iconos por grupo, seleccione la flecha hacia abajo en el lado derecho de la cinta de opciones y, después, en **Diseño de la cinta de opciones**, seleccione**Cinta clásica**. Esto cambiará la cinta de opciones al estilo de cinta tradicional que se desglosa por grupo de características (como Deshacer, Portapapeles, Fuente, Párrafo, Estilos, etc.).
+
+9. En el documento de **Word**, escriba el texto siguiente: **Probar una etiqueta de confidencialidad en un documento con información de identificación personal (PII); en este caso, un número de seguridad social de EE. UU.: 111-11-1111.**
+
+10. Dado que ha habilitado las etiquetas de confidencialidad al principio de este ejercicio, **Word** debe mostrar un grupo **Confidencialidad** en la cinta de opciones de la parte superior de la página. Seleccione la flecha hacia abajo en el grupo **Confidencialidad**. En el menú desplegable que aparece, se debe mostrar la lista de tipos de etiquetas de confidencialidad. Seleccione **Extremadamente confidencial** y, a continuación, en el submenú que aparece, seleccione **Project - Falcon**. <br/>
 
     **Nota:** Después de 24 horas, la etiqueta que creó en la tarea anterior aparecerá en el submenú Extremadamente confidencial, junto a la etiqueta Project-Falcon. Pero por ahora, usará la etiqueta **Project - Falcon** en su lugar.
 
-8. En el documento, observe cómo la etiqueta aplicó una marca de agua **CONFIDENTIAL - ProjectFalcon** en la parte superior del documento. La etiqueta Project - Falcon se configuró igual que la etiqueta que creó, donde se suponía que la marca de agua aparecía diagonalmente a través del centro de la página. ¿Por qué aparece hacia la parte superior de la página? La respuesta es que está usando **Word para la Web**, que de manera predeterminada la muestra como se ve aquí. Para ver cómo aparecerá para alguien que lee el documento, debe ver el documento en la **Vista de lectura**, algo que hará ahora. <br/>
+11. En el documento, observe cómo la etiqueta aplicó una marca de agua **CONFIDENTIAL - ProjectFalcon** en la parte superior del documento. La etiqueta Project - Falcon se configuró igual que la etiqueta que creó, donde se suponía que la marca de agua aparecía diagonalmente a través del centro de la página. ¿Por qué aparece hacia la parte superior de la página? La respuesta es que está usando **Word para la Web**, que de manera predeterminada la muestra como se ve aquí. Para ver cómo aparecerá para alguien que lee el documento, debe ver el documento en la **Vista de lectura**, algo que hará ahora. <br/>
 
     Seleccione la pestaña **Vista** y, a continuación, en la cinta de opciones de Word, seleccione **Vista de lectura**. Observe cómo aparece la marca de agua diagonalmente a través del centro del documento. Así es como aparecerá la marca de agua para alguien que lea el documento. Tenga en cuenta que, si usa la aplicación de escritorio de Word, la marca de agua se muestra como la designa la etiqueta, que en este caso sería igual que como la ve aquí en la Vista de lectura. <br/>
 
     Para salir de la Vista de lectura, seleccione **Editar documento** en la barra de menús de la parte superior de la página. En el menú desplegable que aparece, seleccione **Editar**.
 
-9. En esta primera prueba de validación, quitará esta etiqueta de confidencialidad para que no se aplique a este documento. Una de las opciones de directiva de etiquetas requiere que los usuarios proporcionen justificación para quitar una etiqueta o para seleccionar una etiqueta de clasificación inferior. Ahora comprobará si esta configuración funciona correctamente. <br/>
+12. En esta primera prueba de validación, quitará esta etiqueta de confidencialidad para que no se aplique a este documento. Una de las opciones de directiva de etiquetas requiere que los usuarios proporcionen justificación para quitar una etiqueta o para seleccionar una etiqueta de clasificación inferior. Ahora comprobará si esta configuración funciona correctamente. <br/>
 
     En el grupo **Confidencialidad** de la cinta de opciones de Word, seleccione la flecha hacia abajo. En el menú desplegable que aparece, tenga en cuenta que aparece una marca de verificación junto a **Extremadamente confidencial**. Mantenga el mouse sobre **Extremadamente confidencial** para mostrar el submenú. Observe cómo aparece una marca de verificación junto a **Project - Falcon**. Las marcas de verificación identifican la etiqueta actual que se aplica al documento.  <br/>
  
     Para quitar la etiqueta de este documento, seleccione la etiqueta **Project - Falcon** que aparece en este menú desplegable.
     
-10. En la ventana **Justificación requerida** que aparece, seleccione la opción **Otro (explicación)**. En el campo **Explicar por qué va a cambiar esta etiqueta**, escriba **Probar lo que sucede cuando se quita una etiqueta de un documento** y, a continuación, seleccione **Cambiar**.
+13. En la ventana **Justificación requerida** que aparece, seleccione la opción **Otro (explicación)**. En el campo **Explicar por qué va a cambiar esta etiqueta**, escriba **Probar lo que sucede cuando se quita una etiqueta de un documento** y, a continuación, seleccione **Cambiar**.
 
-11. Observe cómo ha desaparecido la marca de agua del documento. En el grupo **Confidencialidad** de la cinta de opciones de Word, seleccione la flecha hacia abajo. En el menú desplegable que aparece, tenga en cuenta que mientras se muestra **Extremadamente confidencial** > **Project - Falcon**, no aparecen marcas de verificación junto a ellos. Esto indica que la etiqueta de confidencialidad ya no se aplica a este documento.  
+14. Observe cómo ha desaparecido la marca de agua del documento. En el grupo **Confidencialidad** de la cinta de opciones de Word, seleccione la flecha hacia abajo. En el menú desplegable que aparece, tenga en cuenta que mientras se muestra **Extremadamente confidencial** > **Project - Falcon**, no aparecen marcas de verificación junto a ellos. Esto indica que la etiqueta de confidencialidad ya no se aplica a este documento.  
 
-12. Para volver a aplicar la etiqueta de confidencialidad al documento, seleccione **Extremadamente confidencial** > **Project - Falcon** en el menú desplegable. Observe cómo vuelve a aparecer la marca de agua en el documento.
+15. Para volver a aplicar la etiqueta de confidencialidad al documento, seleccione **Extremadamente confidencial** > **Project - Falcon** en el menú desplegable. Observe cómo vuelve a aparecer la marca de agua en el documento.
 
-13. Ahora guardará el documento para que pueda compartirlo en la siguiente tarea. Un campo de nombre de documento que contiene una flecha desplegable aparece en la esquina superior izquierda de la página, a la derecha del icono de Word (Word puede mostrar **Document** o **Document1** como nombre de archivo temporal). Seleccione la flecha desplegable. En el menú desplegable que aparece, confirme que la **Ubicación** del archivo indica **Holly Dickson > Documentos**. <br/>
+16. Ahora guardará el documento para que pueda compartirlo en la siguiente tarea. Un campo de nombre de documento que contiene una flecha desplegable aparece en la esquina superior izquierda de la página, a la derecha del icono de Word (Word puede mostrar **Document** o **Document1** como nombre de archivo temporal). Seleccione la flecha desplegable. En el menú desplegable que aparece, confirme que la **Ubicación** del archivo indica **Holly Dickson > Documentos**. <br/>
 
     En el campo **Nombre de archivo**, cambie el nombre del archivo a **ProtectedDocument1** y, a continuación, seleccione fuera de este menú de nombre de archivo (seleccione dentro del documento). Observe que el nuevo nombre asignado al archivo aparece en la barra de título. 
 
-14. Deje abierta la pestaña **ProtectedDocument1** en la que se muestra el documento. Volverá a este documento en la siguiente tarea para compartir el documento con Joni Sherman.
+17. Deje abierta la pestaña **ProtectedDocument1** en la que se muestra el documento. Volverá a este documento en la siguiente tarea para compartir el documento con Joni Sherman.
 
-Acaba de crear correctamente un documento de Word que contiene la directiva de etiqueta Extremadamente confidencial titulada Project - Falcon. 
+Acaba de crear correctamente un documento de Word que contiene la etiqueta Extremadamente confidencial titulada **Project - Falcon**. 
+
 
 ### Tarea 4: Proteger un documento mediante Microsoft Entra ID Protection
 
@@ -279,7 +286,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
 20. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Siguiente**.
 
-21. En la ventana **Escribir contraseña**, escriba la misma **Contraseña administrativa** proporcionada por el proveedor de hospedaje de laboratorio para la cuenta de administrador del inquilino (es decir, la cuenta de administrador de MOD) y, a continuación, seleccione **Iniciar sesión**.
+21. En la ventana **Escribir contraseña**, escriba la **Contraseña de usuario** proporcionada por el proveedor de hospedaje de laboratorio y, a continuación, seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
 
 22. Si aparece una ventana de **bienvenida**, seleccione la X para cerrarla.
 
@@ -335,5 +342,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
     **Nota:**  En esta tarea, acaba de comprobar que Microsoft Entra ID Protection protegió el documento en función de los parámetros de la directiva PII que configuró. Cuando a Joni se le asignó el permiso de Solo visualización, el documento se abrió en la Vista de lectura y no pudo cambiarlo. Cuando a Joni se le asignó el permiso Editar, el documento se abrió en Word y pudo cambiarlo. Y como Holly no compartió el documento con usted, usted no pudo abrirlo cuando ella envió el documento en un correo electrónico a su buzón personal. 
 
+## Fin del laboratorio 3
 
-## Felicidades. Acaba de completar el laboratorio final en este curso.
+
+# Felicidades. Acaba de completar el laboratorio final en este curso.
