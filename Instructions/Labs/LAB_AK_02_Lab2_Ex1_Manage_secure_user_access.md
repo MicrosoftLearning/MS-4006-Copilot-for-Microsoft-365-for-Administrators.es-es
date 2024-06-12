@@ -116,21 +116,21 @@ En una tarea anterior, creó un grupo de Microsoft 365 para los miembros del equ
 
     **Nota:** Desde este momento, Holly y el administrador de MOD serán los únicos usuarios a los que se les asigne la **Contraseña administrativa** proporcionada por el proveedor de hospedaje de laboratorio. A todos los demás usuarios se les asigna la **Contraseña de usuario** proporcionada por el proveedor de hospedaje de laboratorio.
 
-6. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, tenga en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, seleccione el icono de flecha hacia delante (**>**) dos veces y, a continuación, seleccione el icono de marca de comprobación para avanzar a través de las diapositivas de esta ventana de mensajería. 
+6. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, tenga en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, seleccione el icono de flecha hacia delante (**>**) dos veces y, a continuación, seleccione el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
 
-7. Si apareciera una ventana **Crear con Microsoft 365**, seleccione la **X** en la esquina superior derecha de la ventana para cerrarla. 
+7. Si aparece una ventana **Crear con Microsoft 365**, seleccione la **X** en la esquina superior de la ventana para cerrarla. 
 
 8. La página **Le damos la bienvenida a Microsoft 365** aparecerá en el explorador Edge, en la pestaña **Inicio | Microsoft 365**. Esta es la página principal de Microsoft 365 de Holly. Tenga en cuenta que las iniciales de Holly aparecen en la esquina superior derecha de la pantalla, sin embargo, no se muestra el nombre de Holly. Esto se debe a que la cuenta de Holly no existía cuando se agregó a los usuarios de proyectos piloto de Microsoft 365 al grupo asociado al tema personalizado en el ejercicio del laboratorio anterior. Como Holly desea ver su nombre en la parte superior de cada ventana de Microsoft 365 cuando inicie sesión en el sistema, primero querrá agregar su cuenta al grupo de usuarios de proyectos piloto de Microsoft 365. <br>
 
-    En la columna de iconos de aplicación que aparece en el lado izquierdo de la pantalla, seleccione **Administrador**. Esto abrirá el **Centro de administración de Microsoft 365** en una nueva pestaña del explorador. 
+    En la columna de iconos de aplicación que aparece en el panel de navegación del lado de la pantalla, seleccione **Administrador**. Esto abrirá el **Centro de administración de Microsoft 365** en una nueva pestaña del explorador. 
 
-9. En el **Centro de administración de Microsoft 365**, seleccione **Equipos y grupos** en el panel de navegación y, después, seleccione **Equipos y grupos activos**. 
+9. En el **Centro de administración de Microsoft 365**, seleccione **Equipos y grupos** en el panel de navegación y, después, en él, seleccione **Equipos y grupos activos**. 
 
 10. En la página **Equipos y grupos activos**, hay una pestaña para ver cada uno de los tipos de grupo. La pestaña **Grupos de Teams y Microsoft 365** se muestra de forma predeterminada. En esta pestaña, seleccione **Proyecto piloto de M365**.
 
 11. En el panel **Proyecto piloto de M365** que se muestra, la pestaña **General** se mostrará de forma predeterminada. Seleccione la pestaña **Pertenencia**.
 
-12. En la pestaña **Pertenencia**, la subpestaña **Propietarios** se mostrará de forma predeterminada en el panel de navegación que aparecerá en el lado izquierdo del panel. Seleccione la subpestaña **Miembros** que hay debajo de ella.
+12. En la pestaña **Pertenencia**, la subpestaña **Propietarios** se mostrará de forma predeterminada en el panel de navegación que aparecerá en el lado del panel. Seleccione la subpestaña **Miembros** que hay debajo de ella.
 
 13. En la subpestaña **Miembros**, seleccione **+Agregar miembros**.
 
@@ -256,17 +256,17 @@ El director de tecnología está ansioso por implementar Smart Lockout porque bl
 
 3. En LON-DC1, el **Administrador del servidor** se iniciará automáticamente en el arranque. En **Administrador del servidor**, seleccione **Herramientas** en la barra de menús superior derecha y, en el menú desplegable, seleccione **Administración de directivas de grupo.** Maximice la ventana **Administración de directivas de grupo** que aparece.
 
-4. Desea editar la directiva de grupo que incluye la directiva de bloqueo de cuentas de la organización. Si fuera necesario, en el árbol de consola raíz del panel izquierdo, expanda **Forest:Adatum.com**, expanda **Dominios** y, a continuación, expanda **Adatum.com**.  <br/>
+4. Desea editar la directiva de grupo que incluye la directiva de bloqueo de cuentas de la organización. Si fuera necesario, en el árbol de consola raíz del panel lateral, expanda **Forest:Adatum.com**, expanda **Dominios** y, a continuación, expanda **Adatum.com**.  <br/>
 
     ‎En **Adatum.com**, haga clic con el botón derecho en **Directiva de dominio predeterminada** y, a continuación, seleccione **Editar** en el menú.
 
 5. Maximice la ventana **Editor de administración de directivas de grupo** que aparece.
 
-6. En el árbol **Directiva de dominio predeterminada** del panel izquierdo, en **Configuración del equipo**, expanda **Directivas**, expanda **Configuración de Windows**, expanda **Configuración de seguridad** y, a continuación, expanda **Directivas de cuenta.**
+6. En el árbol **Directiva de dominio predeterminada** del panel lateral, en **Configuración del equipo**, expanda **Directivas**, expanda **Configuración de Windows**, expanda **Configuración de seguridad** y, a continuación, expanda **Directivas de cuenta.**
 
 7. En la carpeta **Directivas de cuenta**, seleccione **Directiva de bloqueo de cuenta**.
 
-8. Como se ve en el panel derecho, no se definió ninguno de los parámetros de Smart Lockout. En lugar de mantener estos parámetros de bloqueo en el Editor de administración de directivas de grupo, en su lugar usará el Centro de administración de Microsoft Entra. Aunque es posible usar el Editor de administración de directivas de grupo, este método se usa normalmente en entornos de Active Directory local. Le mostramos este editor para que pudiera ver esta alternativa. Sin embargo, para las organizaciones que usen estrictamente servicios basados en la nube, como Microsoft 365, o que encuentren el uso del Centro de administración de Microsoft Entra mucho más sencillo que acceder al Editor de administración de directivas de grupo, es preferible usar el **Centro de administración de Microsoft Entra** para asignar los valores correspondientes en el contexto de Entra ID. <br/>  
+8. Como puede ver en el panel que aparece, no se ha definido ninguno de los parámetros de bloqueo inteligente. En lugar de mantener estos parámetros de bloqueo en el Editor de administración de directivas de grupo, en su lugar usará el Centro de administración de Microsoft Entra. Aunque es posible usar el Editor de administración de directivas de grupo, este método se usa normalmente en entornos de Active Directory local. Le mostramos este editor para que pudiera ver esta alternativa. Sin embargo, para las organizaciones que usen estrictamente servicios basados en la nube, como Microsoft 365, o que encuentren el uso del Centro de administración de Microsoft Entra mucho más sencillo que acceder al Editor de administración de directivas de grupo, es preferible usar el **Centro de administración de Microsoft Entra** para asignar los valores correspondientes en el contexto de Entra ID. <br/>  
 
     Tenga en cuenta también que el comportamiento de bloqueo y las opciones de personalización difieren entre los dos métodos. Con el Editor de administración de directivas de grupo, se tiene un control más granular sobre la configuración de directivas, incluyendo el umbral de bloqueo de cuentas, la duración del bloqueo y el restablecimiento del contador de bloqueo de cuentas después. Sin embargo, el uso de este método requiere conocimientos sobre directivas de grupo y la administración de Active Directory. Por el contrario, la directiva de bloqueo de cuentas de Microsoft Entra no se puede personalizar tan extensamente. Sin embargo, es más fácil de usar, aunque carece de algunas de las opciones de ajuste disponibles en la directiva de grupo. <br/>
 
@@ -282,9 +282,9 @@ El director de tecnología está ansioso por implementar Smart Lockout porque bl
 
 13. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, tenga en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, seleccione el icono de flecha hacia delante (**>**) dos veces y, a continuación, seleccione el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
 
-14. Si apareciera una ventana **Buscar más aplicaciones** o **Crear con Microsoft 365**, seleccione la **X** de la esquina superior derecha de la ventana para cerrarla. 
+14. Si apareciera una ventana **Buscar más aplicaciones** o **Crear con Microsoft 365**, seleccione la **X** de la esquina superior de la ventana para cerrarla. 
 
-15. En la página **Le damos la bienvenida a Microsoft 365**, en la lista de iconos de aplicación que aparecen en el panel izquierdo, seleccione **Administrador**. Esto abrirá el **Centro de administración de Microsoft 365** en una nueva pestaña del explorador. 
+15. En la página **Le damos la bienvenida a Microsoft 365**, en la lista de iconos de aplicación que aparecen en el panel de la ventana lateral, seleccione **Administrador**. Esto abrirá el **Centro de administración de Microsoft 365** en una nueva pestaña del explorador. 
 
 16. En el **Centro de administración de Microsoft 365**, seleccione **...Mostrar todo** en el panel de navegación. En **Centros de administración**, seleccione **Identidad**, que mostrará el **Centro de administración de Microsoft Entra** en una nueva pestaña.
 
