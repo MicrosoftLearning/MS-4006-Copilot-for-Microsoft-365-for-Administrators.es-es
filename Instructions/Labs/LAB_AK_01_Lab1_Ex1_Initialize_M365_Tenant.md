@@ -42,13 +42,13 @@ A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson,
 
 8. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, tenga en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, seleccione el icono de flecha hacia delante (**>**) dos veces y, a continuación, seleccione el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
 
-9. Si aparece una ventana **Buscar más aplicaciones** o una ventana **Crear con Microsoft 365**, seleccione la **X** en la esquina superior derecha de las ventanas para cerrarlas. 
+9. Si apareciera una ventana **Buscar más aplicaciones** o **Crear con Microsoft 365**, seleccione la **X** de la esquina superior de la ventana para cerrarla. 
 
 10. La página **Le damos la bienvenida a Microsoft 365** aparece en el explorador Edge en la pestaña **Inicio | Microsoft 365**. Esta es la página principal de Microsoft 365 del MOD Administrator. <br/>
 
     Observe el icono que aparece en la esquina superior derecha de la pantalla. Este icono representa la cuenta **MOD Administrator**, que es la cuenta de administrador de inquilino creada por el proveedor de hospedaje de laboratorio con la que acaba de iniciar sesión. Las otras cuentas de usuario existentes de Microsoft 365 creadas por el proveedor de hospedaje de laboratorio tienen una imagen asociada a cada una de sus cuentas; Por tanto, al iniciar sesión como cualquiera de esos usuarios en laboratorios posteriores, se mostrará la imagen del usuario en lugar de las iniciales del usuario. Sin embargo, cuando un usuario como el MOD Administrator no tiene ninguna imagen asignada, las iniciales del usuario se muestran en lugar de la imagen o, como en este caso, un icono que se ha asignado a la cuenta. <br/>
 
-    En la página **Le damos la bienvenida a Microsoft 365**, en la lista de iconos de aplicación que aparecen en el panel izquierdo, seleccione **Administrador**; se abrirá el **Centro** de administración de Microsoft 365 en una nueva pestaña del explorador. 
+    En la página **Le damos la bienvenida a Microsoft 365**, en la lista de iconos de aplicación que aparecen en el panel de navegación, seleccione **Administrador**; se abre el **centro de administración de Microsoft 365** en una nueva pestaña del explorador. 
 
 11. En el **Centro de administración de Microsoft 365**, seleccione **Mostrar todo** en el panel de navegación y, a continuación, seleccione **Configuración**. En el grupo **Configuración**, seleccione**Configuración de la organización**. 
 
@@ -76,7 +76,7 @@ A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson,
 
 15. Seleccione **Guardar**.
 
-16. En la parte superior del panel **Información de la organización**, tenga en cuenta el mensaje que indica que se han guardado los cambios. Seleccione la **X** en la esquina superior derecha para cerrar el panel.
+16. En la parte superior del panel **Información de la organización**, tenga en cuenta el mensaje que indica que se han guardado los cambios. Seleccione el **X** en la esquina superior del panel para cerrarlo.
 
 17. Permanezca conectado a **LON-CL1** con Microsoft Edge abierto en el **Centro de administración de Microsoft 365** para la siguiente tarea.
 
