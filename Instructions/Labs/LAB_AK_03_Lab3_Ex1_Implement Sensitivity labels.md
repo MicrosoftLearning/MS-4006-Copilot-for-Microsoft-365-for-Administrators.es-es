@@ -183,7 +183,7 @@ En su lugar, probará una de las etiquetas de confidencialidad preexistentes de 
 
 1. En LON-CL1, en el explorador Edge, todavía debe iniciar sesión en Microsoft 365 como **Holly Dickson**.
 
-2. Primero revisará la etiqueta de confidencialidad **Project-Falcon** que aplicará a un documento de esta tarea.  En el explorador Edge, todavía debe tener abierta una pestaña para el portal de **Microsoft Purview** de la tarea anterior. En el portal de **Microsoft Purview**, en el grupo **Protección de la información** del panel de navegación izquierdo, seleccione **Etiquetas**. 
+2. Primero revisará la etiqueta de confidencialidad **Project-Falcon** que aplicará a un documento de esta tarea.  En el explorador Edge, todavía debe tener abierta una pestaña para el portal de **Microsoft Purview** de la tarea anterior. En el portal de **Microsoft Purview**, en el grupo **Protección de la información** del panel, seleccione **Etiquetas**. 
 
 3. En la página **Etiquetas**, en la lista de etiquetas, seleccione la flecha derecha (**>**) junto a ** Extremadamente confidencial** para mostrar las subetiquetas. Al hacerlo, se muestra la etiqueta **Project - Falcon** existente.
 
@@ -244,7 +244,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
 4. En **Outlook en la Web**, seleccione **Nuevo correo** en la parte superior izquierda de la pantalla.
 
-5. En el panel derecho, escriba la siguiente información en el formulario de correo electrónico:
+5. Introduzca la siguiente información en el formulario de correo electrónico:
 
     - A: Escriba **Joni** y, a continuación, seleccione **Joni Sherman** en la lista de usuarios. 
 

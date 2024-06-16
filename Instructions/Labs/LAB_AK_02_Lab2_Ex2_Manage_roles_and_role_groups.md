@@ -11,7 +11,7 @@ A Holly Dickson se le ha asignado el rol Administrador global de Microsoft 365. 
 
     Cambie a **LON-CL1**. 
 
-2. En **LON-CL1**, en el **Centro de administración de Microsoft 365** en el explorador Edge, debe iniciar sesión como Holly Dickson desde un ejercicio de laboratorio anterior. En el panel de navegación izquierdo, seleccione **Usuarios** y, a continuación, seleccione **Usuarios activos**. 
+2. En **LON-CL1**, en el **Centro de administración de Microsoft 365** en el explorador Edge, debe iniciar sesión como Holly Dickson desde un ejercicio de laboratorio anterior. En el panel de navegación, seleccione **Usuarios** y, a continuación, seleccione **Usuarios activos**. 
 
 3. En la lista **Usuarios activos**, seleccione **Diego Siciliani**.  <br/>
 
@@ -222,11 +222,11 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 14. Si aparece el cuadro de diálogo **Bienvenido a Microsoft 365** en medio de la página, seleccione la flecha hacia delante (>) dos veces y, a continuación, la marca de verificación para cerrarla.
 
-15. Si aparece la ventana **Buscar más aplicaciones**, seleccione la **X** en la esquina superior derecha de la ventana para cerrarla.
+15. Si aparece una ventana **Buscar más aplicaciones**, seleccione la **X** en la esquina superior de la ventana para cerrarla.
 
 16. En la ventana **Bienvenido a Microsoft 365**, que es la página principal de Microsoft 365 de Joni, aparece un panel de navegación en el lado izquierdo de la pantalla que indica las aplicaciones a las que el usuario tiene permiso para acceder. En este panel **Aplicaciones**, tenga en cuenta cómo no se muestra la opción **Administrador**. Esto se debe a que Joni nunca tuvo un rol de administrador de Microsoft 365. 
 
-17. Ahora cerrará la sesión de Microsoft 365 como Joni. En **Microsoft Edge**, en la parte superior derecha de la página **Bienvenido a Microsoft 365**, seleccione el icono de usuario para **Joni Sherman** (el círculo en la esquina superior derecha con la imagen de Joni) y, en la ventana **Joni Sherman** que aparece, seleccione **Cerrar sesión.** 
+17. Ahora cerrará la sesión de Microsoft 365 como Joni. En **Microsoft Edge**, en la parte superior derecha de la página **Bienvenido a Microsoft 365**, seleccione el icono de usuario para **Joni Sherman** (el círculo en la esquina superior con la imagen de Joni) y, en la ventana **Joni Sherman** que aparece, seleccione **Cerrar sesión.** 
 
 18. Ahora volverá a iniciar sesión en Microsoft 365 como **Lynne Robbins**. En la pestaña actual del explorador **Edge**, debe mostrar un mensaje que indica **Joni, se ha cerrado la sesión**. En esta ventana, se le ofrece la opción de volver a iniciar sesión como Joni o iniciar sesión como un usuario diferente. <br/>
 
@@ -234,7 +234,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 19. Si aparece el cuadro de diálogo **Bienvenido a Microsoft 365**, seleccione la flecha hacia delante (>) dos veces y, a continuación, seleccione la marca de verificación para cerrar la ventana.
 
-20. Si aparece la ventana **Buscar más aplicaciones**, seleccione la **X** en la esquina superior derecha de la ventana para cerrarla.
+20. Si aparece una ventana **Buscar más aplicaciones**, seleccione la **X** en la esquina superior de la ventana para cerrarla.
 
 21. En la ventana **Bienvenido a Microsoft 365**, que es la página principal de Microsoft 365 de Lynne, tenga en cuenta cómo se muestra el icono **Administrador** en el panel de navegación del lado izquierdo de la pantalla. Este icono aparece porque a Lynne se le asignó a un rol Administrador de Microsoft 365. Seleccione el icono **Administrador** para abrir el Centro de administración de Microsoft 365.
 
@@ -282,7 +282,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 39. En el panel **Bloquear inicio de sesión** que aparece, compruebe que la dirección de correo electrónico de Alex aparece debajo del encabezado **Bloquear inicio de sesión**. Active la casilla **Impedir que este usuario inicie sesión** y, a continuación, seleccione **Guardar cambios.** 
 
-40. La ventana **Bloquear inicio de sesión** debe mostrar un mensaje que indica que Alex está bloqueado para iniciar sesión (y nadie puede iniciar sesión con el nombre de usuario de Alex en caso de que su nombre de usuario esté realmente en peligro). Además, Alex se desconectará automáticamente de los servicios de Microsoft en 60 minutos. Seleccione la **X** en la esquina superior derecha del panel para cerrarlo. 
+40. La ventana **Bloquear inicio de sesión** debe mostrar un mensaje que indica que Alex está bloqueado para iniciar sesión (y nadie puede iniciar sesión con el nombre de usuario de Alex en caso de que su nombre de usuario esté realmente en peligro). Además, Alex se desconectará automáticamente de los servicios de Microsoft en 60 minutos. Seleccione el **X** en la esquina superior del panel para cerrarlo. 
 
 41. Acaban de informar a Lynne de que el nombre de usuario de **Nestor Wilke** también ha sido puesto en peligro. Repita los pasos del 33 al 36 para impedir que Nestor inicie sesión (y para impedir que cualquier otra persona use su nombre de usuario para iniciar sesión). <br/>
 
@@ -290,7 +290,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
     Cierre el panel **Bloquear inicio de sesión**.
 
-42. Anteriormente, bloqueó a Alex Wilber para que no pudiera iniciar sesión. Para comprobar si está bloqueado, intentará iniciar sesión como Alex. Cierre sesión en Microsoft 365 seleccionando el icono de usuario de **Lynne Robbins** (el círculo con la imagen de Lynne en la esquina superior derecha) y en la ventana **Lynne Robbins** que aparece, seleccione **Cerrar sesión.** 
+42. Anteriormente, bloqueó a Alex Wilber para que no pudiera iniciar sesión. Para comprobar si está bloqueado, intentará iniciar sesión como Alex. Cierre sesión en Microsoft 365 seleccionando el icono de usuario de **Lynne Robbins** (el círculo con la imagen de Lynne en la esquina superior) y en la ventana **Lynne Robbins** que aparece, seleccione **Cerrar sesión.** 
 
 43. Como procedimiento recomendado, cierre todas las pestañas del explorador, excepto la pestaña **Cerrar sesión** una vez que se haya cerrado la sesión. En la pestaña **Cerrar sesión**, vaya a **https://portal.office.com**. 
 
