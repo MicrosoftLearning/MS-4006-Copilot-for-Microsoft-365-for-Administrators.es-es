@@ -212,31 +212,31 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 11. En el explorador **Edge**, vaya a **https://portal.office.com**. 
 
-12. Comenzará iniciando sesión en Microsoft 365 como **Joni Sherman**. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje del laboratorio). <br/>
+12. Comenzará iniciando sesión en Microsoft 365 como **Joni Sherman**. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje del laboratorio). Puesto que inicia sesión como Joni Sherman, escriba esta **Contraseña de usuario** que le proporciona el proveedor de hospedaje del laboratorio en la ventana **Escribir contraseña**. <br>
 
-    **Importante:** El proveedor de hospedaje de laboratorio ha asignado una **contraseña administrativa** a la cuenta de administrador de MOD y ha asignado esta misma **contraseña administrativa** a la cuenta de Holly Dickson al crearla. Sin embargo, el proveedor de hospedaje de laboratorio ha asignado otra **contraseña de usuario** a todas las demás cuentas de usuario predefinidas. En el futuro, al iniciar sesión como cualquier usuario que no sea el administrador de MOD o Holly Dickson, debe escribir esta **contraseña de usuario** y NO la **contraseña administrativa**. <br/>
-
-    Puesto que inicia sesión como Joni Sherman, escriba esta **contraseña de usuario** en la ventana **Escribir contraseña**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
+    En el cuadro de diálogo **Actualizar contraseña** que aparece, escriba la **Contraseña de usuario** que le proporciona el proveedor de hospedaje del laboratorio en el campo **Contraseña actual**. Después, escriba la Nueva contraseña de usuario en los campos **Contraseña nueva** y **Confirmar contraseña** y seleccione **Iniciar sesión**.
 
 13. En la ventana **¿Mantener la sesión iniciada?**, active la casilla **No volver a mostrar** y, a continuación, seleccione **Sí**. Si aparece la ventana **Guardar contraseña**, seleccione **Nunca**.
 
 14. Si aparece el cuadro de diálogo **Bienvenido a Microsoft 365** en medio de la página, seleccione la flecha hacia delante (>) dos veces y, a continuación, la marca de verificación para cerrarla.
 
-15. Si aparece una ventana **Buscar más aplicaciones**, seleccione la **X** en la esquina superior de la ventana para cerrarla.
+15. Si aparece una ventana **Buscar más aplicaciones**, **Crear con Microsoft 365** o cualquier otra de tipo introductorio, seleccione la **X** en la esquina superior de la ventana para cerrarla.
 
-16. En la ventana **Bienvenido a Microsoft 365**, que es la página principal de Microsoft 365 de Joni, aparece un panel de navegación en el lado izquierdo de la pantalla que indica las aplicaciones a las que el usuario tiene permiso para acceder. En este panel **Aplicaciones**, tenga en cuenta cómo no se muestra la opción **Administrador**. Esto se debe a que Joni nunca tuvo un rol de administrador de Microsoft 365. 
+16. En la ventana **Bienvenido a Microsoft 365**, que es la página principal de Microsoft 365 de Joni, aparece un panel de navegación en el lateral de la pantalla que indica las aplicaciones a las que el usuario tiene permiso para acceder. En este panel **Aplicaciones**, tenga en cuenta cómo no se muestra la opción **Administrador**. Esto se debe a que Joni nunca tuvo un rol de administrador de Microsoft 365. 
 
 17. Ahora cerrará la sesión de Microsoft 365 como Joni. En **Microsoft Edge**, en la parte superior derecha de la página **Bienvenido a Microsoft 365**, seleccione el icono de usuario para **Joni Sherman** (el círculo en la esquina superior con la imagen de Joni) y, en la ventana **Joni Sherman** que aparece, seleccione **Cerrar sesión.** 
 
 18. Ahora volverá a iniciar sesión en Microsoft 365 como **Lynne Robbins**. En la pestaña actual del explorador **Edge**, debe mostrar un mensaje que indica **Joni, se ha cerrado la sesión**. En esta ventana, se le ofrece la opción de volver a iniciar sesión como Joni o iniciar sesión como un usuario diferente. <br/>
 
-    Seleccione **Cambiar a otra cuenta** y, en el campo **Dirección de correo electrónico** que aparece, escriba **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Iniciar sesión**. En la ventana **Escribir contraseña**, escriba la **contraseña de usuario** proporcionada por el proveedor de hospedaje del laboratorio y seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA. 
+    Seleccione **Cambiar a otra cuenta** y, en el campo **Dirección de correo electrónico** que aparece, escriba **LynneR@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Iniciar sesión**. En la ventana **Escribir contraseña**, escriba la **contraseña de usuario** proporcionada por el proveedor de hospedaje del laboratorio y seleccione **Iniciar sesión**. <br>
+
+    En el cuadro de diálogo **Actualizar contraseña** que aparece, escriba la **Contraseña de usuario** que le proporciona el proveedor de hospedaje del laboratorio en el campo **Contraseña actual**. Después, escriba la Nueva contraseña de usuario en los campos **Contraseña nueva** y **Confirmar contraseña** y seleccione **Iniciar sesión**. 
 
 19. Si aparece el cuadro de diálogo **Bienvenido a Microsoft 365**, seleccione la flecha hacia delante (>) dos veces y, a continuación, seleccione la marca de verificación para cerrar la ventana.
 
-20. Si aparece una ventana **Buscar más aplicaciones**, seleccione la **X** en la esquina superior de la ventana para cerrarla.
+20. Si aparece una ventana **Buscar más aplicaciones**, **Crear con Microsoft 365** o cualquier otra de tipo introductorio, seleccione la **X** en la esquina superior de la ventana para cerrarla.
 
-21. En la ventana **Bienvenido a Microsoft 365**, que es la página principal de Microsoft 365 de Lynne, tenga en cuenta cómo se muestra el icono **Administrador** en el panel de navegación del lado izquierdo de la pantalla. Este icono aparece porque a Lynne se le asignó a un rol Administrador de Microsoft 365. Seleccione el icono **Administrador** para abrir el Centro de administración de Microsoft 365.
+21. En la ventana **Bienvenido a Microsoft 365**, que es la página principal de Microsoft 365 de Lynne, tenga en cuenta cómo se muestra el icono **Administrador** en el panel de navegación del lateral de la pantalla. Este icono aparece porque a Lynne se le asignó a un rol Administrador de Microsoft 365. Seleccione el icono **Administrador** para abrir el Centro de administración de Microsoft 365.
 
 22. En el **Centro de administración de Microsoft 365**, seleccione **Usuarios** en el panel de navegación y, después, seleccione **Usuarios activos**. 
 
@@ -252,7 +252,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
     Sin embargo, ahora seleccione la casilla **Requerir a este usuario que cambie la contraseña la primera vez que inicie sesión** para desactivarla. Tenga en cuenta el mensaje de error que aparece que indica la contraseña (Pa55w.rd) contiene una palabra, frase o serie de números que hace que sea fácil de adivinar. En este caso, escribió una variación de la palabra **password**, que desencadenará este error. El sistema le permite escribir esta contraseña si obliga al usuario a cambiarla en su primer inicio de sesión. Pero si no obliga al usuario a escribir una contraseña diferente en su primer inicio de sesión, no se permitirá esta contraseña.
 
-27. Después de estos dos intentos de contraseña erróneos, Lynne ha decidido permitir que Microsoft 365 genere automáticamente una contraseña. Active la casilla **Crear automáticamente una contraseña** para que muestre una marca de verificación. <br/>
+27. Después de estos dos intentos de contraseña erróneos, Lynne ha decidido permitir que Microsoft 365 genere automáticamente una contraseña. Active la casilla **Crear automáticamente una contraseña** para que muestre una marca de verificación. 
     
 28. La contraseña que se genera automáticamente será una contraseña temporal porque Lynne quiere forzar a Diego a cambiarla la próxima vez que inicie sesión. Por lo tanto, compruebe que la casilla **Requerir que este usuario cambie su contraseña cuando inicie sesión por primera vez** muestra una marca de verificación; si la casilla está desactivada, selecciónela para que muestre una marca de verificación.
 
@@ -264,9 +264,9 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 32. Si aparece una ventana de solicitud de encuesta, seleccione **Cancelar**.
 
-33. En la lista **Usuarios activos**, seleccione el icono de **llave (Restablecer una contraseña)** para **Pradeep Gupta**. 
+33. Ahora quiere cambiar la contraseña de Pradeep Gupta. En la lista **Usuarios activos**, seleccione el icono de **llave (Restablecer una contraseña)** que aparece a la derecha de **Pradeep Gupta**. 
 
-34. En la ventana **Restablecer contraseña** para Pradeep, compruebe que la casilla **Crear automáticamente una contraseña** muestra una marca de verificación; si no lo hace, seleccione este cuadro para que el sistema genere automáticamente una contraseña para Pradeep.  <br/>
+34. En la ventana **Restablecer contraseña** que aparece para Pradeep, compruebe que la casilla **Crear automáticamente una contraseña** muestra una marca de verificación; si no es así, seleccione esta casilla para que el sistema genere automáticamente una contraseña para Pradeep.  <br/>
 
     Esta es una contraseña temporal porque Lynne quiere obligar a Pradeep a cambiarla la próxima vez que inicie sesión. Por lo tanto, compruebe que la casilla **Requerir que este usuario cambie su contraseña cuando inicie sesión por primera vez** muestra una marca de verificación; si la casilla está desactivada, selecciónela para que muestre una marca de verificación.
     
@@ -284,7 +284,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 40. La ventana **Bloquear inicio de sesión** debe mostrar un mensaje que indica que Alex está bloqueado para iniciar sesión (y nadie puede iniciar sesión con el nombre de usuario de Alex en caso de que su nombre de usuario esté realmente en peligro). Además, Alex se desconectará automáticamente de los servicios de Microsoft en 60 minutos. Seleccione el **X** en la esquina superior del panel para cerrarlo. 
 
-41. Acaban de informar a Lynne de que el nombre de usuario de **Nestor Wilke** también ha sido puesto en peligro. Repita los pasos del 33 al 36 para impedir que Nestor inicie sesión (y para impedir que cualquier otra persona use su nombre de usuario para iniciar sesión). <br/>
+41. Acaban de informar a Lynne de que el nombre de usuario de **Nestor Wilke** también ha sido puesto en peligro. Repita los pasos del 37 al 40 para impedir que Nestor inicie sesión (y para impedir que cualquier otra persona utilice su nombre de usuario para iniciar sesión). <br/>
 
     Cuando intentó bloquear el inicio de sesión de Nestor, debería haber recibido un mensaje de error que indica que **no se pudieron guardar los cambios**. La razón por la que recibió este error es que Nestor es un Administrador global y Lynne no. Solo un Administrador global puede impedir que otro Administrador global pueda iniciar sesión. Lynne tendrá que pedirle a Holly Dickson que haga este cambio. <br/>
 
@@ -306,7 +306,7 @@ En esta tarea, comenzará examinando las propiedades administrativas de dos usua
 
 46. En **LON-CL1**, debería seguir conectado a **Microsoft 365** como Holly Dickson en su explorador Edge. La lista **Usuarios activos** debe mostrarse en el **Centro de administración de Microsoft 365** desde el inicio de esta tarea. 
 
-47. Tras una investigación adicional, el director de tecnología de Adatum ha determinado que la cuenta de Alex Wilber no se ha puesto en peligro; por lo tanto, le ha pedido a Holly que quite el bloqueo de la cuenta de usuario de Alex. Repita los pasos del 33 al 36 para desbloquear su cuenta. Observe cómo la ventana **Bloquear inicio de sesión** del paso 35 muestra ahora la ventana **Desbloquear inicio de sesión**.  <br/>
+47. Tras una investigación adicional, el director de tecnología de Adatum ha determinado que la cuenta de Alex Wilber no se ha puesto en peligro; por lo tanto, le ha pedido a Holly que quite el bloqueo de la cuenta de usuario de Alex. Repita los pasos del 37 al 40 para desbloquear su cuenta. Observe cómo la ventana **Bloquear inicio de sesión** del paso 39 muestra ahora la ventana **Desbloquear inicio de sesión**.  <br/>
 
     En la ventana **Desbloquear el inicio de sesión**, la casilla **Bloquear el inicio de sesión de este usuario** está seleccionada. Seleccione la casilla para desactivarla y, a continuación, seleccione **Guardar cambios**. <br/>
     
