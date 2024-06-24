@@ -22,41 +22,56 @@ Iniciará sesión en el equipo Client 1 (LON-CL1) mediante la cuenta local de A
 
 ### Tarea 1: Configuración del perfil de organización de Adatum
 
-A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson, administradora de Microsoft 365 de Adatum. En su rol como Holly, se le ha encargado configurar el perfil de la empresa para su inquilino de prueba de Microsoft 365. En esta tarea, configurará las opciones necesarias para el inquilino de Adatum. Puesto que Holly todavía tiene que crear una cuenta de usuario personal de Microsoft 365 para ella misma (lo hará en el siguiente ejercicio de laboratorio), Holly iniciará sesión inicialmente en Microsoft 365 con la cuenta de administrador de inquilino de Microsoft 365 predeterminada y la contraseña que ha creado el proveedor de hospedaje de laboratorio. Esta es la cuenta **MOD Administrator**, cuyo alias es "admin". El nombre de usuario de esta cuenta es **admin@xxxxxZZZZZZ.onmicrosoft.com** (donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio); el nombre para mostrar de esta cuenta será MOD Administrator.
+A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson, administradora de Microsoft 365 de Adatum. En su rol como Holly, se le ha encargado configurar el perfil de la empresa para su inquilino de prueba de Microsoft 365. En esta tarea, configurará las opciones necesarias para el inquilino de Adatum. Puesto que Holly todavía tiene que crear una cuenta de usuario personal de Microsoft 365 para ella misma (lo hará en el siguiente ejercicio de laboratorio), Holly iniciará sesión inicialmente en Microsoft 365 con la cuenta de administrador de inquilino de Microsoft 365 predeterminada y la contraseña que ha creado el proveedor de hospedaje de laboratorio. Esta es la cuenta MOD Administrator, cuyo alias es "admin". El nombre de usuario de esta cuenta es admin@xxxxxZZZZZZ.onmicrosoft.com (donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio); el nombre para mostrar de esta cuenta será MOD Administrator.
 
-1. Al abrir el entorno de máquina virtual del proveedor de hospedaje de laboratorio, debe comenzar con la máquina virtual Client 1 (LON-CL1). Si el entorno de máquina virtual se abre con una de las otras máquinas (por ejemplo, LON-DC1), cambie a **LON-CL1** ahora.
+1. El proveedor de hospedaje de laboratorio proporcionará dos contraseñas que se usan con las cuentas de usuario ficticias del inquilino de prueba de Microsoft 365. A la cuenta de administrador de MOD, que es el administrador de inquilinos predeterminado, se le ha asignado la **Contraseña administrativa**. A todos los demás usuarios, incluso los asignados a un rol de administrador, se les ha asignado la **Contraseña de usuario**. <br>
 
-2. Inicie sesión en **LON-CL1** con la cuenta de **Administrador** local que ha creado el proveedor de hospedaje de laboratorio con la contraseña **Pa55w.rd**. 
+    Con fines de seguridad, Microsoft ha configurado el inquilino de prueba para que todos los usuarios predefinidos deban cambiar su contraseña en el siguiente inicio de sesión. Algunos proveedores de hospedaje de laboratorio pueden proporcionar dos campos de contraseña nuevos, uno para los administradores (en realidad, el administrador de MOD y Holly Dickson) y otro para todos los demás usuarios. Si estos dos nuevos campos de contraseña aparecen en la máquina virtual, escriba una nueva contraseña para cada uno. Estos nuevos valores de contraseña se almacenarán en la máquina virtual y se mostrarán en las instrucciones del laboratorio. <br>
+ 
+    Es posible que otros proveedores de hospedaje de laboratorio no proporcionen estos nuevos campos de contraseña. Para esos entornos, debe anotar manualmente la nueva contraseña que planea asignar a los usuarios que inician sesión. <br>
 
-3. En la barra de tareas de la parte inferior de la pantalla, seleccione el icono de **Microsoft Edge**. Si es necesario, maximice la ventana del explorador cuando se abra.
+    Al diseñar las nuevas contraseñas, tenga en cuenta las directrices de contraseña de Microsoft: <br>
 
-4. En el explorador Edge, vaya a la página **Inicio de Microsoft 365**; para ello, escriba esta dirección URL en la barra de direcciones: **https://portal.office.com** 
+    - Longitud mínima de 8 caracteres, con al menos:
+       - 1 carácter en mayúsculas
+       - 1 carácter en minúsculas
+       - 1 carácter especial Las contraseñas no se validarán con los requisitos de Microsoft hasta que cambie la contraseña antigua en el siguiente inicio de sesión del usuario.
 
-5. En el cuadro de diálogo **Iniciar sesión** que aparece, escriba el **nombre de usuario administrativo** proporcionado por el proveedor de hospedaje de laboratorio (esta es la cuenta del administrador de MOD). El nombre de usuario debe tener el formato **admin@xxxxxZZZZZZ.onmicrosoft.com**, donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio. Seleccione **Siguiente**. <br/>
+2. Al abrir el entorno de máquina virtual del proveedor de hospedaje de laboratorio, debe comenzar con la máquina virtual Client 1 (LON-CL1). Si el entorno de máquina virtual se abre con una de las otras máquinas (por ejemplo, LON-DC1), cambie a **LON-CL1** ahora.
+
+3. Inicie sesión en **LON-CL1** con la cuenta de **Administrador** local que ha creado el proveedor de hospedaje de laboratorio con la contraseña **Pa55w.rd**. 
+
+4. En la barra de tareas de la parte inferior de la pantalla, seleccione el icono de **Microsoft Edge**. Si es necesario, maximice la ventana del explorador cuando se abra.
+
+5. En el explorador Edge, vaya a la página **Inicio de Microsoft 365**; para ello, escriba esta dirección URL en la barra de direcciones: **https://portal.office.com** 
+
+6. En el cuadro de diálogo Inicio de sesión **Inicio de sesión**, escriba el **Nombre de usuario administrativo** proporcionado por el proveedor de hospedaje de laboratorio (esta es la cuenta de administrador de MOD) para el inquilino de prueba de Microsoft 365. El nombre de usuario debe tener el formato **admin@xxxxxZZZZZZ.onmicrosoft.com**, donde xxxxxZZZZZZ es el prefijo de inquilino asignado por el proveedor de hospedaje de laboratorio. Seleccione **Siguiente**. <br/>
 
     **Nota:** En las instrucciones de laboratorio que aparecen en el entorno de laboratorio de la máquina virtual, el proveedor de hospedaje de laboratorio puede proporcionar la capacidad de seleccionar un botón **Escribir texto** (o equivalente) junto a los datos de recursos, como nombres de usuario, contraseñas, comandos de PowerShell y otros datos que se deben escribir a lo largo del curso de estos laboratorios. Otros proveedores de hospedaje de laboratorio pueden proporcionar un método alternativo, como la capacidad de copiar y pegar esta información. Aproveche esta funcionalidad para no tener que escribir manualmente esta información. 
 
-6. En el cuadro de diálogo **Escribir contraseña**, escriba la **Contraseña administrativa** proporcionada por el proveedor de hospedaje del laboratorio y, después, seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
+7. En el cuadro de diálogo **Escribir contraseña**, escriba la **Contraseña administrativa** predefinida proporcionada por el proveedor de hospedaje de laboratorio y, a continuación, seleccione **Iniciar sesión**. 
 
-7. En el cuadro de diálogo **¿Mantener la sesión iniciada?**, active la casilla **No volver a mostrar esto** y, a continuación, seleccione **Sí**. En el cuadro de diálogo **Guardar contraseña** que aparece, seleccione **Nunca**.
+8. Es posible que el proveedor de hospedaje de laboratorio haya configurado o no la cuenta de administrador de MOD para requerir una nueva contraseña al iniciar sesión. Si es así, aparecerá un cuadro de diálogo de **Actualizar la contraseña**. Si esto ocurre, escriba la **Contraseña administrativa** proporcionada por el proveedor de hospedaje del laboratorio en el campo **Contraseña actual** y, a continuación, escriba la nueva contraseña administrativa en los campos **Nueva contraseña** y **Confirmar contraseña** y seleccione **Iniciar sesión**.
 
-8. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, tenga en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, seleccione el icono de flecha hacia delante (**>**) dos veces y, a continuación, seleccione el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
+9. Si un cuadro de diálogo **¿Mantener la sesión iniciada?** apareciera, active la casilla **No volver a mostrar** y, a continuación, active **Sí.** 
 
-9. Si apareciera una ventana **Buscar más aplicaciones** o **Crear con Microsoft 365**, seleccione la **X** de la esquina superior de la ventana para cerrarla. 
+10. Si aparece un cuadro de diálogo **Le damos la bienvenida a Microsoft 365** en medio de la pantalla, tenga en cuenta que no hay ninguna opción para cerrarlo. En su lugar, a la derecha de la ventana, seleccione el icono de flecha hacia delante (**>**) dos veces y, a continuación, seleccione el icono de marca de verificación para avanzar a través de las diapositivas de esta ventana de mensajes. 
 
-10. La página **Le damos la bienvenida a Microsoft 365** aparece en el explorador Edge en la pestaña **Inicio | Microsoft 365**. Esta es la página principal de Microsoft 365 del MOD Administrator. <br/>
+11. Si aparece un cuadro de diálogo **Buscar más aplicaciones** o **Crear con Microsoft 365**, seleccione la **X** de la esquina superior de los cuadros para cerrarlos. Del mismo modo, si aparece un cuadro de diálogo Iniciar sesión en Microsoft Edge, seleccione el botón **No, gracias**.
 
-    Observe el icono que aparece en la esquina superior derecha de la pantalla. Este icono representa la cuenta **MOD Administrator**, que es la cuenta de administrador de inquilino creada por el proveedor de hospedaje de laboratorio con la que acaba de iniciar sesión. Las otras cuentas de usuario existentes de Microsoft 365 creadas por el proveedor de hospedaje de laboratorio tienen una imagen asociada a cada una de sus cuentas; Por tanto, al iniciar sesión como cualquiera de esos usuarios en laboratorios posteriores, se mostrará la imagen del usuario en lugar de las iniciales del usuario. Sin embargo, cuando un usuario como el MOD Administrator no tiene ninguna imagen asignada, las iniciales del usuario se muestran en lugar de la imagen o, como en este caso, un icono que se ha asignado a la cuenta. <br/>
+12. La página **Le damos la bienvenida a Microsoft 365** aparece en el explorador Edge en la pestaña **Inicio | Microsoft 365**. Esta es la página principal de Microsoft 365 del MOD Administrator. <br/>
+
+    Observe que un icono o un círculo con "MA" (las iniciales para el administrador de MOD) aparecen en la esquina superior derecha de la pantalla. Algunos inquilinos de prueba muestran un icono; otros muestran las iniciales "MA" en un círculo; todo depende de si el proveedor de hospedaje de laboratorio ha agregado un icono a la cuenta del administrador de MOD. El icono o las iniciales representan la cuenta de **Administrador de MOD**, que es la cuenta de administrador de inquilinos creada por el proveedor de hospedaje de laboratorio con la que acaba de iniciar sesión. Si alguna de las cuentas de usuario de Microsoft 365 existentes creadas por el proveedor de hospedaje de laboratorio tiene una imagen asociada a su cuenta, se muestra la imagen del usuario en lugar de las iniciales del usuario al iniciar sesión en Microsoft 365 como ese usuario. Sin embargo, cuando un usuario como el administrador de MOD no tiene ninguna imagen asignada, las iniciales del usuario se muestran en lugar de la imagen o se muestra un icono si el proveedor de hospedaje de laboratorio ha asignado una a la cuenta. <br/>
 
     En la página **Le damos la bienvenida a Microsoft 365**, en la lista de iconos de aplicación que aparecen en el panel de navegación, seleccione **Administrador**; se abre el **centro de administración de Microsoft 365** en una nueva pestaña del explorador. 
 
-11. En el **Centro de administración de Microsoft 365**, seleccione **Mostrar todo** en el panel de navegación y, a continuación, seleccione **Configuración**. En el grupo **Configuración**, seleccione**Configuración de la organización**. 
+13. En el **Centro de administración de Microsoft 365**, seleccione **Mostrar todo** en el panel de navegación y, a continuación, seleccione **Configuración**. En el grupo **Configuración**, seleccione**Configuración de la organización**. 
 
-12. En la pagina **Configuración de la organización**, la pestaña **Servicios** se mostrará de forma predeterminada. Seleccione la pestaña **Perfil de organización**.
+14. En la pagina **Configuración de la organización**, la pestaña **Servicios** se mostrará de forma predeterminada. Seleccione la pestaña **Perfil de organización**.
 
-13. En la pestaña **Perfil de organización**, seleccione **Información de la organización** en la lista de datos de perfil.
+15. En la pestaña **Perfil de organización**, seleccione **Información de la organización** en la lista de datos de perfil.
 
-14. En el panel **Información de la organización** que aparece, escriba la siguiente información: <br/>
+16. En el panel **Información de la organización** que aparece, escriba la siguiente información: <br/>
 
     - Nombre: **Adatum Corporation** (Nota: Adatum Corporation es una subsidiaria de Contoso Inc. Es posible que el inquilino de prueba de Microsoft que el proveedor de hospedaje de laboratorio haya obtenido para este laboratorio se haya asignado originalmente a Contoso. Si **Contoso** (o cualquier otro valor) aparece como el nombre de la organización, cámbielo a **Adatum Corporation**.
 
@@ -74,11 +89,11 @@ A lo largo de los laboratorios de este curso, asumirá el rol de Holly Dickson,
 
     - Lenguaje preferido: **Inglés**
 
-15. Seleccione **Guardar**.
+17. Seleccione **Guardar**.
 
-16. En la parte superior del panel **Información de la organización**, tenga en cuenta el mensaje que indica que se han guardado los cambios. Seleccione el **X** en la esquina superior del panel para cerrarlo.
+18. En la parte superior del panel **Información de la organización**, tenga en cuenta el mensaje que indica que se han guardado los cambios. Seleccione el **X** en la esquina superior del panel para cerrarlo.
 
-17. Permanezca conectado a **LON-CL1** con Microsoft Edge abierto en el **Centro de administración de Microsoft 365** para la siguiente tarea.
+19. Permanezca conectado a **LON-CL1** con Microsoft Edge abierto en el **Centro de administración de Microsoft 365** para la siguiente tarea.
 
 ### Tarea 2: Creación de un tema personalizado para el equipo del proyecto piloto de Adatum
 
