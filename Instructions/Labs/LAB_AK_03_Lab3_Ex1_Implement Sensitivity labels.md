@@ -11,30 +11,61 @@ Para implementar etiquetas de confidencialidad como parte del proyecto piloto en
 
 **Nota:** Aunque el cambio de nombre de Azure AD a Microsoft Entra ID sigue en curso, el cliente de Azure Information Protection no ha cambiado de nombre al momento de escribir este artículo. Posteriormente se cambiará de nombre al cliente de Microsoft Entra ID Protection.
 
-1. Al final del laboratorio anterior, estaba en LON-CL2. Cambie a **LON-CL1**.  <br/>
-
-    Todavía debe iniciar sesión en LON-CL1 como la cuenta local de **adatum\administrator** y, en el explorador Edge, todavía debe iniciar sesión en Microsoft 365 como **Holly Dickson**. 
+1. Todavía debe iniciar sesión en LON-CL1 como la cuenta local de **adatum\administrator** y, en el explorador Edge, todavía debe iniciar sesión en Microsoft 365 como **Holly Dickson**. 
 
 2. En **Microsoft Edge**, abra una nueva pestaña y escriba (o copie y pegue) la siguiente dirección URL en la barra de direcciones: **https://www.microsoft.com/en-us/download/confirmation.aspx?id=53018** <br/>
 
-    Esto iniciará la descarga del cliente de etiqueta unificada de Azure Information Protection.
+    Esto iniciará la descarga del cliente de **Microsoft Purview Information Protection**.
 
-3. En la ventana **Descargas** que aparece en la parte superior derecha de la página, verá que se está descargando el archivo **AzInfoProtection_UI.exe**. Una vez que el archivo haya terminado de descargarse, seleccione el vínculo **Abrir archivo** que aparece debajo del nombre de archivo.  <br/>
+3. En la ventana **Descargas** que aparece en la parte superior derecha de la página, verá que se está descargando el archivo **PurviewInfoProtection.exe**. Una vez que el archivo haya terminado de descargarse, seleccione el vínculo **Abrir archivo** que aparece debajo del nombre de archivo.
 
-    **Nota:** Las pruebas han demostrado que el asistente de **Microsoft Azure Information Protection** a veces puede tardar hasta 10-15 segundos en abrirse. Evite seleccionar **Abrir archivo** una segunda vez hasta que esté seguro de que el asistente no se ha iniciado.
+4. Se abrirá el asistente de **Microsoft Azure Information Protection**. Si el asistente no se muestra en el escritorio, seleccione el icono del asistente en la barra de tareas para mostrar el asistente.
 
-4. Se abrirá (eventualmente) el asistente de **Microsoft Azure Information Protection**. Si el asistente no se muestra en el escritorio, seleccione el icono del asistente en la barra de tareas para mostrar el asistente.
-
-5. En la ventana **Instalar el cliente de Azure Information Protection** que aparece, desactive la casilla **Ayudar a mejorar Azure Information Protection enviando estadísticas de uso a Microsoft** y, a continuación, seleccione el botón **Acepto**.
+5. En el asistente, en la ventana **Instalar el cliente de **Microsoft Purview Information Protection**** que aparece, seleccione la casilla **Reconozco que se desinstalará el complemento de AIP para Office (obligatorio)** y desactive la casilla **Ayudar a mejorar Microsoft Purview Information Protection enviando estadísticas de uso a Microsoft**. Luego seleccione el botón **Acepto**.
 
 6. Cuando la instalación se haya completado, seleccione **Cerrar**.
 
-7. En el explorador Edge, cierre la pestaña **Descargar** que se abrió en esta tarea para descargar el cliente de Azure Information Protection.
-
 Ha instalado correctamente el cliente de etiqueta unificada de Azure Information Protection en la máquina virtual LON-CL1.
 
+### Tarea 2: Habilitar etiquetas de confidencialidad para archivos en SharePoint y OneDrive
 
-### Tarea 2: Crear una etiqueta de confidencialidad
+En este ejercicio habilitará etiquetas de confidencialidad para archivos de Office y archivos PDF compatibles de SharePoint y OneDrive. Cuando esta característica está habilitada, los usuarios verán el botón **Confidencialidad** en la cinta de opciones para poder aplicar etiquetas. También verán cualquier nombre de etiqueta que se haya aplicado en la barra de estado. En el caso de SharePoint, los usuarios también pueden ver y aplicar etiquetas de confidencialidad desde el panel de detalles.
+
+La habilitación de esta característica también permite que SharePoint y OneDrive puedan procesar el contenido de los archivos de Office y, opcionalmente, los documentos PDF cifrados mediante una etiqueta de confidencialidad. La etiqueta se puede aplicar en Office para la web o en aplicaciones de escritorio de Office. También se puede cargar o guardar en SharePoint y OneDrive. Hasta que habilite esta característica, estos servicios no podrán procesar archivos cifrados, lo que significa que la coautoría, eDiscovery, la prevención de pérdida de datos, la búsqueda y otras características de colaboración no funcionarán para estos archivos.
+
+En primer lugar, debe habilitar las etiquetas de confidencialidad para los archivos en línea de Office almacenados en SharePoint y OneDrive. Luego debe habilitar la compatibilidad con archivos PDF.
+
+**Nota:** Al igual que con todos los cambios de configuración de nivel de inquilino para SharePoint y OneDrive, el cambio tarda unos 15 minutos en surtir efecto.
+
+1. En LON-CL1, en el explorador Edge, todavía debe iniciar sesión en Microsoft 365 como **Holly Dickson**.
+
+2. En el explorador Edge, todavía debe tener abierta una pestaña para el **Centro de administración de Microsoft 365**. Si no es así, abra una nueva pestaña y escriba la siguiente dirección URL: **https://admin.microsoft.com**.
+
+3. En el **Centro de administración de Microsoft 365**, si es necesario, seleccione **... Mostrar todo**. Seleccione **Cumplimiento** en el grupo **Centros de administración**. Se abrirá el portal de Microsoft Purview en una nueva pestaña.
+
+4. Empezará habilitando las etiquetas de confidencialidad para los archivos en línea de Office almacenados en SharePoint y OneDrive. <br/>
+
+    En el portal de **Microsoft Purview**, en la sección **Soluciones** del panel de navegación, seleccione **Protección de información** y, luego, **Etiquetas**.
+
+5. En la página **Etiquetas**, deberá aparecer el siguiente mensaje en medio de la página: **Su organización no ha activado la capacidad de procesar el contenido de los archivos en línea de Office a los que se les han aplicado etiquetas de confidencialidad cifradas y que se han almacenado en OneDrive y SharePoint. Puede activarla aquí, pero tenga en cuenta que se requiere configuración adicional para entornos multigeográficos.** <br/>
+
+    Debajo de este mensaje se muestra el botón **Activar ahora**. Selecciónelo.  <br/>
+
+    **Nota:** El comando se ejecuta inmediatamente y, una vez que se actualice la página, ya no verá el mensaje ni el botón.
+
+6. Ahora debe habilitar la protección de PDF para archivos de SharePoint y OneDrive. <br/>
+
+    En el portal de **Microsoft Purview**, en **Protección de la información** en el panel de navegación, seleccione **Etiquetado automático**.
+
+7. En la página **Etiquetado automático**, debería ver el banner **Proteger archivos PDF con etiquetado automático** en el centro de la página. Seleccione el encabezado de **Proteger archivos PDF con etiquetado automático** para activar la protección de PDF para los archivos de SharePoint y OneDrive. 
+
+8. En el cuadro de diálogo **Etiquetado automático** que aparece, seleccione **Confirmar** para confirmar que desea activar la protección de PDF para archivos de SharePoint y OneDrive. 
+
+    **Nota:** El comando se ejecuta inmediatamente y, una vez que se actualice la página, ya no verá el banner **Proteger archivos PDF con etiquetado automático**.
+
+9. Deje el explorador Edge abierto junto con todas las pestañas. 
+
+### Tarea 3: Crear una etiqueta de confidencialidad
 
 En este ejercicio, creará una etiqueta de confidencialidad y la agregará a la directiva predeterminada para que sea válida para todos los usuarios del inquilino de Adatum.
 
@@ -175,7 +206,7 @@ En este ejercicio, creará una etiqueta de confidencialidad y la agregará a la 
 45. En la página **Nueva directiva creada**, seleccione **Listo**.
 
 
-### Tarea 3: Asignar una etiqueta de confidencialidad preexistente a un documento
+### Tarea 4: Asignar una etiqueta de confidencialidad preexistente a un documento
 
 Como se describe en las instrucciones al principio de este laboratorio, no es posible probar inmediatamente la etiqueta de confidencialidad y la directiva de etiquetas que creó en la tarea anterior. Esto se debe a que una nueva directiva de etiquetas tarda hasta 24 horas en propagarse a través de Microsoft 365 y que su etiqueta sea visible en aplicaciones como Microsoft Word y Outlook.
 
@@ -230,9 +261,9 @@ En su lugar, probará una de las etiquetas de confidencialidad preexistentes de 
 Acaba de crear correctamente un documento de Word que contiene la etiqueta Extremadamente confidencial titulada **Project - Falcon**. 
 
 
-### Tarea 4: Proteger un documento mediante Microsoft Entra ID Protection
+### Tarea 5: Proteger un documento mediante Microsoft Purview Information Protection
 
-En la tarea anterior, creó un documento de Word y lo protegió con la etiqueta de confidencialidad **Project - Falcon**. Esta etiqueta insertó una marca de agua en el documento. En esta tarea, compartirá el documento que creó con Joni Sherman y restringirá a Joni al permiso "Solo visualización". Esto le permitirá ver cómo Microsoft Entra ID Protection protege el documento en función de los parámetros que configure.
+En la tarea anterior, creó un documento de Word y lo protegió con la etiqueta de confidencialidad **Project - Falcon**. Esta etiqueta insertó una marca de agua en el documento. En esta tarea, compartirá el documento que creó con Joni Sherman y restringirá a Joni al permiso "Solo visualización". Esto le permitirá ver cómo Microsoft Purview Information Protection protege el documento en función de los parámetros que configure.
 
 Para comprobar si la protección que asignó al documento funciona, primero enviará el documento a dos personas: a Joni Sherman y a su propia dirección de correo electrónico personal. A continuación, comprobará que Joni solo pueda ver el documento y no editarlo, y comprobará que no pueda acceder al documento, ya que no se ha compartido con usted. Por último, cambiará el permiso en el documento para que Joni pueda editarlo y le enviará un correo electrónico a este documento actualizado para realizar pruebas. El propósito de los dos correos electrónicos a Joni, uno con un vínculo de documento que proporciona acceso de solo lectura y otro con un vínculo de documento que proporciona la capacidad de editar el documento, es ver cómo Microsoft Entra ID Protection puede proporcionar varios niveles de protección de documentos. 
 
@@ -268,7 +299,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
 11. En la ventana **Compartir "ProtectedDocument1"**, mantenga el mouse sobre el icono de "ojo" que aparece a la derecha del nombre de Joni. Si lo hace, se debería mostrar **Puede ver**, que es la configuración actual que se asignó a ella para este documento. El icono de "ojo" es la designación de "Puede ver". Seleccione el botón **Copiar vínculo**. 
 
-12. Una vez que aparezca el mensaje **Vínculo copiado** en la parte inferior de la ventana **Compartir "ProtectedDocument1"**, seleccione la X en la esquina superior derecha de la ventana para cerrarlo.
+12. Una vez que aparezca el mensaje **Vínculo copiado** en la parte inferior de la ventana **Compartir "ProtectedDocument1"**, seleccione la X en la esquina superior de la ventana para cerrarlo.
 
 13. En el explorador Edge, seleccione la pestaña **Correo - Holly Dickson -Outlook** para volver al mensaje de correo electrónico. En el cuerpo del mensaje, debajo del texto que agregó anteriormente, pegue (Ctrl+V) el vínculo al documento compartido que acaba de copiar en el Portapapeles. Debería aparecer un vínculo para el archivo denominado **ProtectedDocument1.docx**. 
 
@@ -286,7 +317,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
 20. En la ventana **Iniciar sesión**, escriba **JoniS@xxxxxZZZZZZ.onmicrosoft** (donde xxxxxZZZZZZ es el prefijo de inquilino proporcionado por el proveedor de hospedaje de laboratorio) y, a continuación, seleccione **Siguiente**.
 
-21. En la ventana **Escribir contraseña**, escriba la **Contraseña de usuario** proporcionada por el proveedor de hospedaje de laboratorio y, a continuación, seleccione **Iniciar sesión**. Si fuera necesario, complete el proceso de inicio de sesión de MFA.
+21. En la ventana **Escribir contraseña**, escriba la nueva contraseña de usuario que asignó previamente a la cuenta de Joni y, luego, seleccione **Iniciar sesión**. 
 
 22. Si aparece una ventana de **bienvenida**, seleccione la X para cerrarla.
 
@@ -340,7 +371,7 @@ Para comprobar si la protección que asignó al documento funciona, primero envi
 
 36. Cuando Joni tenía el permiso Solo visualización, el documento se abrió en el panel Vista de lectura. Por lo tanto, Joni no pudo editar el documento. Esta versión del documento proporciona permiso de edición a Joni, por lo que esta vez el documento debe abrirse en Word en modo de edición normal. Compruebe que puede escribir texto en el documento. 
 
-    **Nota:**  En esta tarea, acaba de comprobar que Microsoft Entra ID Protection protegió el documento en función de los parámetros de la directiva PII que configuró. Cuando a Joni se le asignó el permiso de Solo visualización, el documento se abrió en la Vista de lectura y no pudo cambiarlo. Cuando a Joni se le asignó el permiso Editar, el documento se abrió en Word y pudo cambiarlo. Y como Holly no compartió el documento con usted, usted no pudo abrirlo cuando ella envió el documento en un correo electrónico a su buzón personal. 
+    **Nota:**  En esta tarea, acaba de comprobar que Microsoft Purview Information Protection protegió el documento en función de los parámetros de la directiva PII que configuró. Cuando a Joni se le asignó el permiso de Solo visualización, el documento se abrió en la Vista de lectura y no pudo cambiarlo. Cuando a Joni se le asignó el permiso Editar, el documento se abrió en Word y pudo cambiarlo. Y como Holly no compartió el documento con usted, usted no pudo abrirlo cuando ella envió el documento en un correo electrónico a su buzón personal. 
 
 ## Fin del laboratorio 3
 
